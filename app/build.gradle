@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android-extensions'
 }
 
 android {
@@ -29,6 +30,12 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    viewBinding {
+        enabled = true
+    }
+
+
 }
 
 dependencies {
@@ -43,4 +50,7 @@ dependencies {
 
     /** SDP **/
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    /** ZOOM IMAGE **/
+    implementation 'com.github.stfalcon:frescoimageviewer:0.1.0'
 }

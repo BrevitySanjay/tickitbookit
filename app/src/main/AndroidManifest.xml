@@ -14,10 +14,19 @@
         android:theme="@style/Theme.TickitBookit"
         tools:targetApi="31">
         <activity
-            android:name=".RegisterActivity"
+            android:name=".activity.GalleryActivity"
+            android:theme="@style/Theme.TickitBookit_Light"
             android:exported="false" />
         <activity
+            android:name=".activity.RegisterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TickitBookit_Light" />
+        <activity
             android:name=".activity.LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.TickitBookit_Light" />
+        <activity
+            android:name=".activity.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,7 +36,14 @@
         </activity>
         <activity
             android:name=".activity.MainActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.TickitBookit_Light" />
     </application>
+
+
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
