@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">TickitBookit</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="sign_in_to_continue">Sign in to continue</string>
+    <string name="your_email">Your Email</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="sign_in">Sign In</string>
+    <string name="or_connect_using">Or connect using</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="let_s_get_started">Let’s Get Started!</string>
+    <string name="create_your_account">Create your account</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="password">Password</string>
 </resources>
