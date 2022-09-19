@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
     android:orientation="vertical"
     tools:context=".activity.LoginActivity">
-
 
     <com.tickitbookit.controls.CTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/_10sdp"
-        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_30sdp"
         android:text="@string/welcome_back"
         android:textColor="@color/textGreen"
-        android:textSize="@dimen/_15sdp"
+        android:textSize="@dimen/_18sdp"
         android:textStyle="bold" />
 
 
@@ -153,12 +153,13 @@
 
 
             <com.tickitbookit.controls.CTextView
+                android:id="@+id/txtForgotPassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginRight="@dimen/_10sdp"
                 android:padding="@dimen/_5sdp"
-                android:text="@string/remember_me"
+                android:text="@string/forgot_password_text"
                 android:textColor="@color/purple_200"
                 android:textSize="@dimen/_12sdp"
                 android:textStyle="bold" />
@@ -168,6 +169,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/_10sdp"
@@ -207,6 +209,7 @@
             android:textSize="@dimen/_12sdp" />
 
         <com.tickitbookit.controls.CTextView
+            android:id="@+id/txtSignUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

@@ -15,11 +15,29 @@
         <item name="android:windowDisablePreview">true</item>
     </style>
 
+    <style name="foodRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_bar_full</item>
+        <item name="android:minHeight">22dip</item>
+        <item name="android:maxHeight">22dip</item>
+    </style>
 
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/ratings_yellow</item>
+        <item name="android:progressDrawable">@drawable/rating_bar_full</item>
+
+    </style>
 
     <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
         <!--<item name="android:windowBackground">@drawable/big_dialog</item>
         <item name="android:backgroundTint">@color/LightGreen</item>-->
+    </style>
+    <style name="ImageView.4Corner" parent="">
+        <item name="cornerSizeTopRight">@dimen/_15sdp</item>
+        <item name="cornerSizeTopLeft">@dimen/_15sdp</item>
+        <item name="cornerSizeBottomRight">@dimen/_15sdp</item>
+        <item name="cornerSizeBottomLeft">@dimen/_15sdp</item>
+        <item name="cornerFamily">rounded</item>
     </style>
 
 

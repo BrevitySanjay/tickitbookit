@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".activity.ActivityDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_230sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_230sdp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_activity_details"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_230sdp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_rectangle_black_trans"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:adjustViewBounds="true"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_arrow_left_white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_180sdp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/bg_round_white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.tickitbookit.controls.CTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:text="from/"
+                        android:textColor="@color/purple_200"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold" />
+
+
+                    <com.tickitbookit.controls.CTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:text="$70.00"
+                        android:textColor="@color/purple_200"
+                        android:textSize="@dimen/_16sdp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_180sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:layout_weight="0.5"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <com.tickitbookit.controls.CTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:gravity="right"
+                        android:text="User Ratings"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <RatingBar
+                        android:id="@+id/pop_ratingbar"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:rating="5"
+                        android:stepSize="1" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <com.tickitbookit.controls.CTextView
+            android:id="@+id/CTextView3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:text="@string/activity_detail_title_1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="10dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_pin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CTextView3" />
+
+        <com.tickitbookit.controls.CTextView
+            android:id="@+id/CTextView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Amsterdam, North Holland, Netherlands"
+            android:textColor="@color/textGreen"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/grayLight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_clock"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <com.tickitbookit.controls.CTextView
+            android:id="@+id/CTextView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="4 hours 30 minutes, 5.5-hours or 7-hours"
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+        <ImageView
+            android:id="@+id/imgConfirmation"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_confirmation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+        <com.tickitbookit.controls.CTextView
+            android:id="@+id/txtInstanceConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Instant Confirmation"
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgConfirmation"
+            app:layout_constraintStart_toEndOf="@+id/imgConfirmation"
+            app:layout_constraintTop_toTopOf="@+id/imgConfirmation" />
+
+        <ImageView
+            android:id="@+id/imgRefundMoney"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_refundmoney"
+            app:layout_constraintBottom_toBottomOf="@+id/txtInstanceConfirm"
+            app:layout_constraintStart_toEndOf="@+id/txtInstanceConfirm"
+            app:layout_constraintTop_toTopOf="@+id/txtInstanceConfirm" />
+
+        <com.tickitbookit.controls.CTextView
+            android:id="@+id/txtRefundMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Refundable"
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgRefundMoney"
+            app:layout_constraintStart_toEndOf="@+id/imgRefundMoney"
+            app:layout_constraintTop_toTopOf="@+id/imgRefundMoney" />
+
+
+        <com.tickitbookit.controls.CTextView
+            android:id="@+id/CTextView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:gravity="right"
+            android:text="Voucher"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgConfirmation" />
+
+        <ImageView
+            android:id="@+id/imgVoucher"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_mail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CTextView10" />
+
+        <com.tickitbookit.controls.CTextView
+            android:id="@+id/txtVoucherEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Johndoedemoaccount@gmail.com"
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgVoucher"
+            app:layout_constraintStart_toEndOf="@+id/imgVoucher"
+            app:layout_constraintTop_toTopOf="@+id/imgVoucher" />
+
+        <com.tickitbookit.controls.CTextView
+            android:id="@+id/CTextView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginStart="8dp"
+            android:gravity="right"
+            android:text="@string/guide_language"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgVoucher" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_translate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CTextView11" />
+
+        <com.tickitbookit.controls.CTextView
+            android:id="@+id/txtLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="English, Hindi &amp; More"
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/grayLight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+        <LinearLayout
+            android:id="@+id/llHighlights"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/bg_grey"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view1"
+            app:layout_constraintVertical_bias="0.017">
+
+
+            <com.tickitbookit.controls.CTextView
+                android:id="@+id/txthighlights"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0.8"
+                android:text="Highlights"
+                android:textColor="@color/purple_200"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_5sdp"
+                android:src="@drawable/ic_arrow_down" />
+        </LinearLayout>
+
+        <com.tickitbookit.controls.CTextView
+            android:id="@+id/txthighlightsDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:lineSpacingExtra="@dimen/_2sdp"
+            android:text="Choice of several departures throughout the day
+Enjoy a day away from the hustle and bustle of the city
+Pickup from a centrally located meeting point
+Travel by boat and see the sights from the water"
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llHighlights" />
+
+
+        <LinearLayout
+            android:id="@+id/llOverview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/bg_grey"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txthighlightsDesc"
+            app:layout_constraintTop_toBottomOf="@+id/txthighlightsDesc">
+
+
+            <com.tickitbookit.controls.CTextView
+                android:id="@+id/txtOverView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0.8"
+                android:text="@string/overview"
+                android:textColor="@color/purple_200"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_5sdp"
+                android:src="@drawable/ic_arrow_down" />
+        </LinearLayout>
+
+        <com.tickitbookit.controls.CTextView
+            android:id="@+id/txtOverviewDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:lineSpacingExtra="@dimen/_2sdp"
+            android:text="@string/overview_desc"
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llOverview" />
+
+
+        <LinearLayout
+            android:id="@+id/llInformation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/bg_grey"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtOverviewDesc">
+
+
+            <com.tickitbookit.controls.CTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0.8"
+                android:text="@string/information"
+                android:textColor="@color/purple_200"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_5sdp"
+                android:src="@drawable/ic_arrow_down" />
+        </LinearLayout>
+
+        <com.tickitbookit.controls.CTextView
+            android:id="@+id/txtInformation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:lineSpacingExtra="@dimen/_2sdp"
+            android:text="@string/info_desc"
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llInformation" />
+
+
+        <LinearLayout
+            android:id="@+id/llMeetingoint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/bg_grey"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtInformation">
+
+
+            <com.tickitbookit.controls.CTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0.8"
+                android:text="@string/meeting_point"
+                android:textColor="@color/purple_200"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_5sdp"
+                android:src="@drawable/ic_arrow_down" />
+        </LinearLayout>
+
+        <com.tickitbookit.controls.CTextView
+            android:id="@+id/txtMeetingPoint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:lineSpacingExtra="@dimen/_2sdp"
+            android:text="@string/info_desc"
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llMeetingoint" />
+
+        <View
+            android:id="@+id/view11"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/grayLight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtMeetingPoint" />
+
+        <com.tickitbookit.controls.CTextView
+            android:id="@+id/CTextView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:gravity="right"
+            android:text="@string/gallery"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtMeetingPoint" />
+
+
+        <com.tickitbookit.controls.CTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.8"
+            android:text="View All"
+            android:textColor="@color/purple_200"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@+id/CTextView12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/CTextView12" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvGallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CTextView12" />
+
+        <com.tickitbookit.controls.CTextView
+            android:id="@+id/CTextView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="right"
+            android:text="@string/nearby_activities"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvGallery" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvNearByActivities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CTextView13" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

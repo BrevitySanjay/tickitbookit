@@ -6,9 +6,26 @@
         <entry key="../../../../../../layout/custom_preview.xml" value="0.12318840579710146" />
         <entry key="app/src/main/res/drawable-v24/bg_edittext.xml" value="0.136" />
         <entry key="app/src/main/res/drawable/bg_button.xml" value="0.136" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_register.xml" value="0.18333333333333332" />
+        <entry key="app/src/main/res/drawable/bg_grey.xml" value="0.1175" />
+        <entry key="app/src/main/res/drawable/bg_round_white.xml" value="0.1175" />
+        <entry key="app/src/main/res/drawable/ic__11823_star_icon.xml" value="0.1175" />
+        <entry key="app/src/main/res/drawable/ic_primary__2_.xml" value="0.1175" />
+        <entry key="app/src/main/res/drawable/ic_primary__3_.xml" value="0.1175" />
+        <entry key="app/src/main/res/drawable/ic_primary__4_.xml" value="0.1175" />
+        <entry key="app/src/main/res/drawable/ic_rectangle_64.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/rating_bar_empty.xml" value="0.1175" />
+        <entry key="app/src/main/res/drawable/rating_bar_filled.xml" value="0.1175" />
+        <entry key="app/src/main/res/drawable/star_filled.xml" value="0.1175" />
+        <entry key="app/src/main/res/layout/activity_details.xml" value="0.15" />
+        <entry key="app/src/main/res/layout/activity_forgot_passwrod.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_gallery.xml" value="0.1984375" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.16" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.14" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.1984375" />
+        <entry key="app/src/main/res/layout/item_gallary.xml" value="0.1984375" />
+        <entry key="app/src/main/res/layout/loading_dialog.xml" value="0.1984375" />
+        <entry key="app/src/main/res/layout/row_gallery.xml" value="0.1984375" />
+        <entry key="app/src/main/res/layout/row_nearbyactivity.xml" value="0.1984375" />
       </map>
     </option>
   </component>
@@ -17,5 +34,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1" />
+      </ProjectState>
+    </option>
   </component>
 </project>
