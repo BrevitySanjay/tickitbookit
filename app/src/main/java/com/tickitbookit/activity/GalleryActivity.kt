@@ -9,17 +9,18 @@ import com.tickitbookit.R
 import com.tickitbookit.adapter.GalleryAdapter
 import com.tickitbookit.adapter.SearchItemAdapter
 import com.tickitbookit.classes.CustomAppCompatActivity
+import com.tickitbookit.databinding.ActivityGalleryBinding
 import com.tickitbookit.moels.DummyData
-import kotlinx.android.synthetic.main.activity_gallery.*
-import kotlinx.android.synthetic.main.fragment_home.view.*
 
 class GalleryActivity : CustomAppCompatActivity() {
 
     private val searchItems = ArrayList<DummyData>()
+    private lateinit var binding: ActivityGalleryBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_gallery)
+        binding = ActivityGalleryBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         searchItems.add(DummyData("350","Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing"))
         searchItems.add(DummyData("350","Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing"))
@@ -28,12 +29,10 @@ class GalleryActivity : CustomAppCompatActivity() {
         searchItems.add(DummyData("350","Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing"))
         searchItems.add(DummyData("350","Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing"))
 
-        rvGallery.layoutManager = GridLayoutManager(this, 2)
-        rvGallery.adapter = GalleryAdapter(searchItems)
-
-        imgBack.setOnClickListener {
+        binding.rvGallery.layoutManager = GridLayoutManager(this, 2)
+        binding.rvGallery.adapter = GalleryAdapter(searchItems)
+        binding.imgBack.setOnClickListener {
             finish()
         }
-
     }
 }

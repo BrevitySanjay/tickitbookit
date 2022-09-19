@@ -12,20 +12,22 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.tickitbookit.R
 import com.tickitbookit.adapter.DestinationItemAdapter
+import com.tickitbookit.databinding.FragmentMainHomeBinding
 import com.tickitbookit.moels.DummyData
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_home.view.*
-import kotlinx.android.synthetic.main.fragment_main_home.*
-import kotlinx.android.synthetic.main.fragment_main_home.view.*
 
 
 class MainHomeFragment : Fragment() {
+
+
+    private lateinit var binding: FragmentMainHomeBinding
 
     private val searchItems = ArrayList<DummyData>()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val view: View = inflater.inflate(R.layout.fragment_main_home, container, false)
+        binding = FragmentMainHomeBinding.inflate(layoutInflater)
+
+        //val view: View = inflater.inflate(R.layout.fragment_main_home, container, false)
 
         searchItems.add(DummyData("350","Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing"))
         searchItems.add(DummyData("350","Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing"))
@@ -34,44 +36,44 @@ class MainHomeFragment : Fragment() {
         searchItems.add(DummyData("350","Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing"))
         searchItems.add(DummyData("350","Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing"))
 
-        view.rvDestination.layoutManager = StaggeredGridLayoutManager(2,LinearLayoutManager.VERTICAL)
-        view.rvDestination.adapter = DestinationItemAdapter(searchItems)
+        binding.rvDestination.layoutManager = StaggeredGridLayoutManager(2,LinearLayoutManager.VERTICAL)
+        binding.rvDestination.adapter = DestinationItemAdapter(searchItems)
 
 
-        view.btnSearch.setOnClickListener {
+        binding.btnSearch.setOnClickListener {
             val ft: FragmentTransaction = requireFragmentManager().beginTransaction()
             ft.replace(R.id.content, HomeFragment(), "NewFragmentTag")
             ft.commit()
         }
 
-        view.tabActivity.setOnClickListener {
-            selectTab(view.tabActivity)
+        binding.tabActivity.setOnClickListener {
+            selectTab(binding.tabActivity)
         }
 
-        view.tabFlights.setOnClickListener {
-            selectTab(view.tabFlights)
+        binding.tabFlights.setOnClickListener {
+            selectTab(binding.tabFlights)
         }
 
-        view.tabHotels.setOnClickListener {
-            selectTab(view.tabHotels)
+        binding.tabHotels.setOnClickListener {
+            selectTab(binding.tabHotels)
         }
 
-        return view
+        return binding.root
     }
 
 
 
     private fun selectTab(text : TextView){
 
-        tabActivity.setTextColor(Color.parseColor("#53585A"));
-        tabFlights.setTextColor(Color.parseColor("#53585A"));
-        tabHotels.setTextColor(Color.parseColor("#53585A"));
-        tabActivity.setBackgroundResource(0)
-        tabFlights.setBackgroundResource(0)
-        tabHotels.setBackgroundResource(0)
+        binding.tabActivity.setTextColor(Color.parseColor("#53585A"));
+        binding.tabFlights.setTextColor(Color.parseColor("#53585A"));
+        binding.tabHotels.setTextColor(Color.parseColor("#53585A"));
+        binding.tabActivity.setBackgroundResource(0)
+        binding.tabFlights.setBackgroundResource(0)
+        binding.tabHotels.setBackgroundResource(0)
 
         text.setTextColor(Color.parseColor("#FFFFFF"));
-        text.setBackgroundResource(com.tickitbookit.R.drawable.round_corner_blue_50)
+        text.setBackgroundResource(R.drawable.round_corner_blue_50)
     }
 
 }
