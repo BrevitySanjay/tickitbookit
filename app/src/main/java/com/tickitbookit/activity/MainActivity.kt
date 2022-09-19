@@ -10,6 +10,8 @@ class MainActivity : CustomAppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
+    /** CREATE NEW BRANCH **/
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
