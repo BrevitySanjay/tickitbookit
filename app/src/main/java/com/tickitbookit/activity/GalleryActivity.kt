@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.tickitbookit.R
 import com.tickitbookit.adapter.GalleryAdapter
+import com.tickitbookit.adapter.SearchItemAdapter
 import com.tickitbookit.classes.CustomAppCompatActivity
 import com.tickitbookit.databinding.ActivityGalleryBinding
 import com.tickitbookit.moels.DummyData
@@ -30,7 +31,6 @@ class GalleryActivity : CustomAppCompatActivity() {
 
         binding.rvGallery.layoutManager = GridLayoutManager(this, 2)
         binding.rvGallery.adapter = GalleryAdapter(searchItems)
-
         binding.imgBack.setOnClickListener {
             finish()
         }

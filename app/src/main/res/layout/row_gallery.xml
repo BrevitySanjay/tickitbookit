@@ -14,7 +14,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/ImageView.4Corner"
-        app:srcCompat="@drawable/ic_user" />
+        app:srcCompat="@drawable/dummyimage" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

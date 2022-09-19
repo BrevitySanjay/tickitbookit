@@ -1,26 +1,34 @@
 package com.tickitbookit.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.tickitbookit.R
-import kotlinx.android.synthetic.main.activity_login.*
+import com.tickitbookit.classes.CustomAppCompatActivity
+import com.tickitbookit.databinding.ActivityLoginBinding
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : CustomAppCompatActivity() {
+
+    private lateinit var binding: ActivityLoginBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        btnLogin.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+
+        binding.btnLogin.setOnClickListener {
+            startActivity(Intent(this,MainActivity::class.java))
+            finish()
         }
 
-        txtSignUp.setOnClickListener {
-            startActivity(Intent(this, RegisterActivity::class.java))
+        binding.llRegister.setOnClickListener {
+            startActivity(Intent(this,RegisterActivity::class.java))
+            finish()
         }
 
-        txtForgotPassword.setOnClickListener {
-            startActivity(Intent(this, ForgotPasswrodActivity::class.java))
+        binding.tvForgotPassword.setOnClickListener {
+            startActivity(Intent(this,GalleryActivity::class.java))
+            finish()
         }
+
     }
 }
