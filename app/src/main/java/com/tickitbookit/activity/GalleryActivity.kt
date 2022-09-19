@@ -1,13 +1,8 @@
 package com.tickitbookit.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.tickitbookit.R
 import com.tickitbookit.adapter.GalleryAdapter
-import com.tickitbookit.adapter.SearchItemAdapter
 import com.tickitbookit.classes.CustomAppCompatActivity
 import com.tickitbookit.databinding.ActivityGalleryBinding
 import com.tickitbookit.moels.DummyData

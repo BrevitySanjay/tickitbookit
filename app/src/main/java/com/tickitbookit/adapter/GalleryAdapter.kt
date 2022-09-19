@@ -8,7 +8,6 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.tickitbookit.R
 import com.tickitbookit.moels.DummyData
-import android.graphics.drawable.Animatable;
 
 
 class GalleryAdapter(private val searchItems : ArrayList<DummyData>) : RecyclerView.Adapter<GalleryAdapter.ViewHolder>(){

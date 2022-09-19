@@ -1,14 +1,11 @@
 package com.tickitbookit.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
-import com.tickitbookit.R
 import com.tickitbookit.adapter.GalleryAdapter
 import com.tickitbookit.classes.CustomAppCompatActivity
 import com.tickitbookit.databinding.ActivityGalleryBinding
 import com.tickitbookit.moels.DummyData
-import kotlinx.android.synthetic.main.activity_details.*
 
 class ActivityDetailsActivity : CustomAppCompatActivity() {
 
@@ -30,11 +27,11 @@ class ActivityDetailsActivity : CustomAppCompatActivity() {
 
         binding.rvGallery.layoutManager = GridLayoutManager(this, 2)
         binding.rvGallery.adapter = GalleryAdapter(searchItems)
-
+/*
         rvNearByActivities.layoutManager = GridLayoutManager(this, 2)
         rvNearByActivities.adapter = GalleryAdapter(searchItems)
 
-        pop_ratingbar.numStars = 5
+        pop_ratingbar.numStars = 5*/
 
     }
 }

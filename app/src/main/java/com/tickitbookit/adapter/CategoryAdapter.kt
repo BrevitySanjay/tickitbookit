@@ -5,12 +5,10 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.tickitbookit.R
-import com.tickitbookit.moels.DummyData
-import android.graphics.drawable.Animatable;
 import android.widget.TextView
+import com.tickitbookit.moels.DummyData
 
 
 class CategoryAdapter(private val categoryItem : ArrayList<DummyData>) : RecyclerView.Adapter<CategoryAdapter.ViewHolder>(){

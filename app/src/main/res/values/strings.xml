@@ -21,16 +21,15 @@
     <string name="activity_detail_title_1">Zaanse Schans Windmills, Marken and Volendam Half-Day Trip from Amsterdam</string>
     <string name="guide_language">Guide Language</string>
     <string name="overview">Overview</string>
-    <string name="overview_desc">Next, you\'ll travel to the world-famous fishing villages of Volendam and Marken, on the coast of the former Zuiderzee (now called Ijselmeer). The old wooden houses here are built on stilts and locals still wear their colorful traditional dresses. Then, take a 20-minute boat trip from Volendam to Marken, with approximately 45 minutes at each stop (summer only). The cruise is optional but is included in the cost of the tour.
+    <!--<string name="overview_desc">Next, you\'ll travel to the world-famous fishing villages of Volendam and Marken, on the coast of the former Zuiderzee (now called Ijselmeer). The old wooden houses here are built on stilts and locals still wear their colorful traditional dresses. Then, take a 20-minute boat trip from Volendam to Marken, with approximately 45 minutes at each stop (summer only). The cruise is optional but is included in the cost of the tour.
 \n
 During the day you'll also stop at one of the few farms where cheese is still made in the traditional way.
 \n<B>7-Hour tour departing at 12pm</B>
 This option was created based on customer feedback to offer an alternative itinerary and longer tour duration. The afternoon tour at 12pm is 7hours in duration. It visits the windmill village of "Zaanse Schans" and the towns of Marken and Volendam. However, this tour gives you more time at all 3 locations.</string>
 
-    <string name="info_desc">Next, you\'ll travel to the world-famous fishing villages of Volendam and Marke Next, you\'ll travel to the world-famous fishing villages of Volendam and Marke</string>
+    <string name="info_desc">Next, you\'ll travel to the world-famous fishing villages of Volendam and Marke Next, you\'ll travel to the world-famous fishing villages of Volendam and Marke</string>-->
     <string name="information">Information</string>
     <string name="meeting_point">Meeting Point</string>
-    <string name="gallery">Gallery</string>
     <string name="nearby_activities">Nearby Activities</string>
     <string name="home">Home</string>
     <string name="favourite">Favourite</string>
@@ -44,7 +43,6 @@ This option was created based on customer feedback to offer an alternative itine
     <string name="where_are_you_going">Where are you going</string>
     <string name="top_destination">Top Destination</string>
     <string name="view_all">View All</string>
-    <string name="forgot_password">Forgot Password?</string>
     <string name="gallery">Gallery</string>
     <string name="filter">Filter</string>
     <string name="reset">Reset</string>
