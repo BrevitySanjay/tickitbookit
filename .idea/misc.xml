@@ -4,7 +4,6 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../../../../layout/custom_preview.xml" value="0.12590579710144928" />
-        <entry key="../../../../../../layout/custom_preview.xml" value="0.12454710144927536" />
         <entry key="app/src/main/res/drawable/favourit_selector.xml" value="0.139" />
         <entry key="app/src/main/res/drawable/home_selector.xml" value="0.139" />
         <entry key="app/src/main/res/drawable/ic_facebook.xml" value="0.205" />
@@ -31,8 +30,8 @@
         <entry key="app/src/main/res/drawable/tickit_bookit.xml" value="0.139" />
         <entry key="app/src/main/res/drawable/top_corner_radius_sheet.xml" value="0.205" />
         <entry key="app/src/main/res/drawable/trips_selector.xml" value="0.139" />
-        <entry key="app/src/main/res/layout/activity_details.xml" value="0.1984375" />
-        <entry key="app/src/main/res/layout/activity_forgot_passwrod.xml" value="0.1984375" />
+        <entry key="app/src/main/res/layout/activity_details.xml" value="0.1628901239846088" />
+        <entry key="app/src/main/res/layout/activity_forgot_passwrod.xml" value="0.1628901239846088" />
         <entry key="app/src/main/res/layout/activity_gallery.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
@@ -47,7 +46,6 @@
         <entry key="app/src/main/res/layout/row_catrgory1.xml" value="0.1628901239846088" />
         <entry key="app/src/main/res/layout/row_destination.xml" value="0.22" />
         <entry key="app/src/main/res/layout/row_gallery.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/row_nearbyactivity.xml" value="0.1984375" />
         <entry key="app/src/main/res/layout/top_corner_radius_sheet.xml" value="0.1" />
         <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.1" />
       </map>

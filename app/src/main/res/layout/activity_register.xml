@@ -20,17 +20,17 @@
             android:layout_marginTop="@dimen/_30sdp"
             android:text="@string/let_s_get_started"
             android:textColor="@color/textGreen"
-            android:textSize="@dimen/_15sdp"
+            android:textSize="@dimen/_16sdp"
             android:textStyle="bold" />
 
 
-        <com.tickitbookit.controls.CTextView
+        <com.tickitbookit.controls.CTextViewLight
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_16sdp"
             android:text="@string/create_your_account"
             android:textColor="@color/textGray"
-            android:textSize="@dimen/_12sdp" />
+            android:textSize="@dimen/_11sdp" />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -39,24 +39,23 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
                 android:orientation="vertical">
 
                 <com.tickitbookit.controls.CTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_16sdp"
-                    android:layout_marginTop="@dimen/_20sdp"
                     android:text="@string/first_name"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_12sdp"
+                    android:textSize="@dimen/_11sdp"
                     android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_45sdp"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginStart="@dimen/_16sdp"
-                    android:layout_marginEnd="@dimen/_16sdp"
                     android:background="@drawable/bg_edittext"
                     android:gravity="center"
                     android:orientation="horizontal">
@@ -82,19 +81,16 @@
                 <com.tickitbookit.controls.CTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_16sdp"
                     android:layout_marginTop="@dimen/_20sdp"
                     android:text="@string/last_name"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_12sdp"
+                    android:textSize="@dimen/_11sdp"
                     android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_45sdp"
                     android:layout_gravity="center"
-                    android:layout_marginStart="@dimen/_16sdp"
-                    android:layout_marginEnd="@dimen/_16sdp"
                     android:background="@drawable/bg_edittext"
                     android:gravity="center"
                     android:orientation="horizontal">
@@ -120,19 +116,16 @@
                 <com.tickitbookit.controls.CTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_16sdp"
                     android:layout_marginTop="@dimen/_20sdp"
                     android:text="@string/your_email"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_12sdp"
+                    android:textSize="@dimen/_11sdp"
                     android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_45sdp"
                     android:layout_gravity="center"
-                    android:layout_marginStart="@dimen/_16sdp"
-                    android:layout_marginEnd="@dimen/_16sdp"
                     android:background="@drawable/bg_edittext"
                     android:gravity="center"
                     android:orientation="horizontal">
@@ -158,24 +151,22 @@
                 <com.tickitbookit.controls.CTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_16sdp"
                     android:layout_marginTop="@dimen/_20sdp"
                     android:text="@string/password"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_12sdp"
+                    android:textSize="@dimen/_11sdp"
                     android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_45sdp"
                     android:layout_gravity="center"
-                    android:layout_marginStart="@dimen/_16sdp"
-                    android:layout_marginEnd="@dimen/_16sdp"
                     android:background="@drawable/bg_edittext"
                     android:gravity="center"
                     android:orientation="horizontal">
 
                     <com.tickitbookit.controls.CEditText
+                        android:id="@+id/edtPassword"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -184,9 +175,11 @@
                         android:inputType="textPassword"
                         android:padding="@dimen/_5sdp"
                         android:text="fkjefjkfjkf"
+                        android:letterSpacing="0.5"
                         android:textSize="@dimen/_10sdp" />
 
                     <ImageView
+                        android:id="@+id/passwordVisible"
                         android:layout_width="@dimen/_17sdp"
                         android:layout_height="@dimen/_17sdp"
                         android:layout_marginEnd="@dimen/_10sdp"
@@ -198,24 +191,22 @@
                 <com.tickitbookit.controls.CTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_16sdp"
                     android:layout_marginTop="@dimen/_20sdp"
                     android:text="@string/confirm_password"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_12sdp"
+                    android:textSize="@dimen/_11sdp"
                     android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_45sdp"
                     android:layout_gravity="center"
-                    android:layout_marginStart="@dimen/_16sdp"
-                    android:layout_marginEnd="@dimen/_16sdp"
                     android:background="@drawable/bg_edittext"
                     android:gravity="center"
                     android:orientation="horizontal">
 
                     <com.tickitbookit.controls.CEditText
+                        android:id="@+id/edtConfirmPassword"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -224,9 +215,11 @@
                         android:inputType="textPassword"
                         android:padding="@dimen/_5sdp"
                         android:text="fkjefjkfjkf"
+                        android:letterSpacing="0.5"
                         android:textSize="@dimen/_10sdp" />
 
                     <ImageView
+                        android:id="@+id/confirmPasswordVisible"
                         android:layout_width="@dimen/_17sdp"
                         android:layout_height="@dimen/_17sdp"
                         android:layout_marginEnd="@dimen/_10sdp"
@@ -237,8 +230,6 @@
                 <com.tickitbookit.controls.CTextView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_40sdp"
-                    android:layout_marginStart="@dimen/_16sdp"
-                    android:layout_marginEnd="@dimen/_16sdp"
                     android:layout_marginTop="@dimen/_20sdp"
                     android:background="@drawable/bg_button"
                     android:text="@string/sign_up"
@@ -258,22 +249,23 @@
                     android:orientation="horizontal">
 
 
-                    <com.tickitbookit.controls.CTextView
+                    <com.tickitbookit.controls.CTextViewLight
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="@string/already_have_an_account"
                         android:textColor="@color/black"
-                        android:textSize="@dimen/_12sdp" />
+                        android:textSize="@dimen/_11sdp" />
 
-                    <com.tickitbookit.controls.CTextView
+                    <com.tickitbookit.controls.CTextViewSemibold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginRight="@dimen/_10sdp"
                         android:text="@string/sign_up"
+                        android:layout_marginStart="@dimen/_5sdp"
                         android:textColor="@color/purple_200"
-                        android:textSize="@dimen/_12sdp"
+                        android:textSize="@dimen/_11sdp"
                         android:textStyle="bold" />
 
                 </LinearLayout>

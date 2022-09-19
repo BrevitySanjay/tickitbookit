@@ -48,4 +48,6 @@ This option was created based on customer feedback to offer an alternative itine
     <string name="reset">Reset</string>
     <string name="price_range">Price Range</string>
     <string name="category">Category</string>
+    <string name="we_will_email_you_a_link_to_reset_your_password">We will email you a link to reset your\npassword</string>
+    <string name="apply">Apply</string>
 </resources>

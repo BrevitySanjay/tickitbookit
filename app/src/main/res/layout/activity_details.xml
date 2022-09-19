@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -40,6 +41,7 @@
 
 
             <ImageView
+                android:id="@+id/imgBack"
                 android:layout_width="@dimen/_30sdp"
                 android:layout_height="@dimen/_30sdp"
                 android:layout_marginStart="@dimen/_10sdp"
@@ -68,7 +70,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_2sdp"
-                        android:layout_marginBottom="@dimen/_2sdp"
                         android:text="from/"
                         android:textColor="@color/purple_200"
                         android:textSize="@dimen/_12sdp"
@@ -79,8 +80,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_2sdp"
-                        android:layout_marginRight="@dimen/_10sdp"
-                        android:layout_marginBottom="@dimen/_2sdp"
                         android:text="$70.00"
                         android:textColor="@color/purple_200"
                         android:textSize="@dimen/_16sdp"
@@ -97,6 +96,16 @@
                     android:gravity="right"
                     android:orientation="vertical">
 
+                    <RatingBar
+                        android:id="@+id/pop_ratingbar"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:rating="5"
+                        android:stepSize="1" />
+
                     <com.tickitbookit.controls.CTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -107,22 +116,12 @@
                         android:text="User Ratings"
                         android:textColor="@color/white"
                         android:textSize="@dimen/_12sdp" />
-
-                    <RatingBar
-                        android:id="@+id/pop_ratingbar"
-                        style="?android:attr/ratingBarStyleSmall"
-                        android:layout_width="wrap_content"
-                        android:layout_height="fill_parent"
-                        android:isIndicator="true"
-                        android:numStars="5"
-                        android:rating="5"
-                        android:stepSize="1" />
                 </LinearLayout>
             </LinearLayout>
         </RelativeLayout>
 
 
-        <com.tickitbookit.controls.CTextView
+        <com.tickitbookit.controls.CTextViewSemibold
             android:id="@+id/CTextView3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -131,7 +130,7 @@
             android:layout_marginRight="@dimen/_10sdp"
             android:text="@string/activity_detail_title_1"
             android:textColor="@color/black"
-            android:textSize="@dimen/_15sdp"
+            android:textSize="@dimen/_14sdp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -182,7 +181,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view" />
 
-        <com.tickitbookit.controls.CTextView
+        <com.tickitbookit.controls.CTextViewLight
             android:id="@+id/CTextView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -204,7 +203,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
-        <com.tickitbookit.controls.CTextView
+        <com.tickitbookit.controls.CTextViewLight
             android:id="@+id/txtInstanceConfirm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -226,7 +225,7 @@
             app:layout_constraintStart_toEndOf="@+id/txtInstanceConfirm"
             app:layout_constraintTop_toTopOf="@+id/txtInstanceConfirm" />
 
-        <com.tickitbookit.controls.CTextView
+        <com.tickitbookit.controls.CTextViewLight
             android:id="@+id/txtRefundMoney"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -239,7 +238,7 @@
             app:layout_constraintTop_toTopOf="@+id/imgRefundMoney" />
 
 
-        <com.tickitbookit.controls.CTextView
+        <com.tickitbookit.controls.CTextViewSemibold
             android:id="@+id/CTextView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -263,7 +262,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/CTextView10" />
 
-        <com.tickitbookit.controls.CTextView
+        <com.tickitbookit.controls.CTextViewLight
             android:id="@+id/txtVoucherEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -275,7 +274,7 @@
             app:layout_constraintStart_toEndOf="@+id/imgVoucher"
             app:layout_constraintTop_toTopOf="@+id/imgVoucher" />
 
-        <com.tickitbookit.controls.CTextView
+        <com.tickitbookit.controls.CTextViewSemibold
             android:id="@+id/CTextView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -298,7 +297,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/CTextView11" />
 
-        <com.tickitbookit.controls.CTextView
+        <com.tickitbookit.controls.CTextViewLight
             android:id="@+id/txtLanguage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -325,7 +324,7 @@
         <LinearLayout
             android:id="@+id/llHighlights"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_35sdp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
@@ -360,7 +359,7 @@
                 android:src="@drawable/ic_arrow_down" />
         </LinearLayout>
 
-        <com.tickitbookit.controls.CTextView
+        <com.tickitbookit.controls.CTextViewLight
             android:id="@+id/txthighlightsDesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -383,7 +382,7 @@ Travel by boat and see the sights from the water"
         <LinearLayout
             android:id="@+id/llOverview"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_35sdp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
@@ -415,7 +414,7 @@ Travel by boat and see the sights from the water"
                 android:src="@drawable/ic_arrow_down" />
         </LinearLayout>
 
-        <com.tickitbookit.controls.CTextView
+        <com.tickitbookit.controls.CTextViewLight
             android:id="@+id/txtOverviewDesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -434,7 +433,7 @@ Travel by boat and see the sights from the water"
         <LinearLayout
             android:id="@+id/llInformation"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_35sdp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
@@ -485,7 +484,7 @@ Travel by boat and see the sights from the water"
         <LinearLayout
             android:id="@+id/llMeetingoint"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_35sdp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
@@ -543,7 +542,7 @@ Travel by boat and see the sights from the water"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtMeetingPoint" />
 
-        <com.tickitbookit.controls.CTextView
+        <com.tickitbookit.controls.CTextViewSemibold
             android:id="@+id/CTextView12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -560,6 +559,7 @@ Travel by boat and see the sights from the water"
 
 
         <com.tickitbookit.controls.CTextView
+            android:id="@+id/viewGalleryImages"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -586,7 +586,7 @@ Travel by boat and see the sights from the water"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/CTextView12" />
 
-        <com.tickitbookit.controls.CTextView
+        <com.tickitbookit.controls.CTextViewSemibold
             android:id="@+id/CTextView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
