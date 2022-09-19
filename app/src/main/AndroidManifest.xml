@@ -14,6 +14,12 @@
         android:theme="@style/Theme.TickitBookit"
         tools:targetApi="31">
         <activity
+            android:name=".activity.ActivityDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ForgotPasswrodActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.GalleryActivity"
             android:theme="@style/Theme.TickitBookit_Light"
             android:exported="false" />

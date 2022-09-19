@@ -10,4 +10,7 @@
     <color name="textGreen">#5CB85C</color>
     <color name="textGray">#53585A</color>
     <color name="textLightGray">#53585A</color>
+    <color name="ratings_yellow">#DBDF00</color>
+    <color name="transparent">#ffffffff</color>
+    <color name="grayLight">#CCCCCC</color>
 </resources>
