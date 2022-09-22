@@ -151,7 +151,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    <com.tickitbookit.controls.CTextView
+    <com.tickitbookit.controls.CTextViewSemibold
         android:id="@+id/btnSearch"
         android:layout_width="0dp"
         android:layout_height="@dimen/_40sdp"
@@ -166,8 +166,7 @@
         android:paddingBottom="@dimen/_3sdp"
         android:text="Search"
         android:textColor="@color/white"
-        android:textSize="@dimen/_14sdp"
-        android:textStyle="bold"
+        android:textSize="@dimen/_13sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cSearchLayout" />

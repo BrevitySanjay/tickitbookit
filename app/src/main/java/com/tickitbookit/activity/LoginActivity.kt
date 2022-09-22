@@ -30,12 +30,10 @@ class LoginActivity : CustomAppCompatActivity() {
 
         binding.llRegister.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
-            finish()
         }
 
         binding.tvForgotPassword.setOnClickListener {
             startActivity(Intent(this, ForgotPasswrodActivity::class.java))
-            finish()
         }
 
         binding.imgVisiblePassword.setOnClickListener {

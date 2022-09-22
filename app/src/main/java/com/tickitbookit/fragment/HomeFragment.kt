@@ -25,8 +25,6 @@ class HomeFragment : Fragment() {
 
 
     private lateinit var binding: FragmentHomeBinding
-    private val result = java.util.ArrayList<String>()
-
     private val searchItems = ArrayList<DummyData>()
     private val categoryItem = ArrayList<DummyData>()
     private val categoryItem1 = ArrayList<DummyData>()

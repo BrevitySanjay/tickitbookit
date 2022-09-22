@@ -14,12 +14,10 @@ class ForgotPasswrodActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityForgotPasswrodBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         clickView()
-
     }
 
-    fun clickView(){
+    private fun clickView(){
 
         binding.imgBack.setOnClickListener {
             finish()

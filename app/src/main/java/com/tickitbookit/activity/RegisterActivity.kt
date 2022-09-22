@@ -15,16 +15,17 @@ class RegisterActivity : CustomAppCompatActivity() {
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         clickView()
 
     }
 
 
-    fun clickView(){
-        binding.llLogin.setOnClickListener {
-            startActivity(Intent(this,LoginActivity::class.java))
-            finish()
-        }
+    private fun clickView(){
+
+        binding.llLogin.setOnClickListener { finish() }
+
+        binding.imgBack.setOnClickListener { finish() }
 
 
         binding.passwordVisible.setOnClickListener {

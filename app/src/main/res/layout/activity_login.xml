@@ -33,15 +33,14 @@
             android:textSize="@dimen/_11sdp" />
 
 
-        <com.tickitbookit.controls.CTextView
+        <com.tickitbookit.controls.CTextViewSemibold
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_16sdp"
             android:layout_marginTop="@dimen/_40sdp"
             android:text="@string/your_email"
             android:textColor="@color/black"
-            android:textSize="@dimen/_11sdp"
-            android:textStyle="bold" />
+            android:textSize="@dimen/_11sdp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -72,15 +71,14 @@
 
         </LinearLayout>
 
-        <com.tickitbookit.controls.CTextView
+        <com.tickitbookit.controls.CTextViewSemibold
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_16sdp"
             android:layout_marginTop="@dimen/_20sdp"
             android:text="Password"
             android:textColor="@color/black"
-            android:textSize="@dimen/_11sdp"
-            android:textStyle="bold" />
+            android:textSize="@dimen/_11sdp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -169,14 +167,13 @@
                     android:padding="@dimen/_5sdp"
                     android:text="@string/forgot_password"
                     android:textColor="@color/purple_200"
-                    android:textSize="@dimen/_11sdp"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/_11sdp" />
 
 
             </LinearLayout>
         </LinearLayout>
 
-        <com.tickitbookit.controls.CTextView
+        <com.tickitbookit.controls.CTextViewSemibold
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_40sdp"
@@ -187,8 +184,7 @@
             android:text="@string/sign_in"
             android:gravity="center"
             android:textColor="@color/white"
-            android:textSize="@dimen/_15sdp"
-            android:textStyle="bold" />
+            android:textSize="@dimen/_13sdp" />
 
         <com.tickitbookit.controls.CTextViewLight
             android:layout_width="wrap_content"
@@ -283,8 +279,7 @@
                 android:text="@string/sign_up"
                 android:textColor="@color/purple_200"
                 android:layout_marginStart="@dimen/_5sdp"
-                android:textSize="@dimen/_11sdp"
-                android:textStyle="bold" />
+                android:textSize="@dimen/_11sdp" />
 
         </LinearLayout>
 

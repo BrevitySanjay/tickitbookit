@@ -100,4 +100,6 @@ abstract class CustomAppCompatActivity : AppCompatActivity() {
     fun showAuthErrorDialog() {
         showToast("Auth Error")
     }
+
+
 }

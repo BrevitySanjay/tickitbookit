@@ -5,6 +5,7 @@ plugins {
 }
 
 android {
+
     compileSdk 32
 
     defaultConfig {
@@ -49,5 +50,6 @@ dependencies {
     implementation 'com.jemshit:crystal-range-seekbar:1.2.0'
     /** FLOW LAYOUT **/
     implementation 'com.github.simonebortolin:FlowLayoutManager:1.8.0'
-
+    /** CUSTOM CALENDER **/
+    implementation 'com.github.shuwnyuantee:Material-Calendar-View:1.3'
 }
