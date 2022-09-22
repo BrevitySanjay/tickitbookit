@@ -1,5 +1,6 @@
 package com.tickitbookit.fragment
 
+import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,12 +12,15 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.tickitbookit.R
 import com.tickitbookit.adapter.CategoryAdapter
 import com.tickitbookit.adapter.CategoryAdapter1
+import com.tickitbookit.adapter.SearchActivityDialogAdapter
 import com.tickitbookit.adapter.SearchItemAdapter
+import com.tickitbookit.databinding.DialogSearchLayoutBinding
 import com.tickitbookit.databinding.FilterBottomSheetBinding
 import com.tickitbookit.databinding.FragmentHomeBinding
 import com.tickitbookit.moels.DummyData
 import com.xiaofeng.flowlayoutmanager.Alignment
 import com.xiaofeng.flowlayoutmanager.FlowLayoutManager
+
 
 class HomeFragment : Fragment() {
 
@@ -24,10 +28,15 @@ class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
 
     private val searchItems = ArrayList<DummyData>()
+    private val searchItems1 = ArrayList<DummyData>()
     private val categoryItem = ArrayList<DummyData>()
     private val categoryItem1 = ArrayList<DummyData>()
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
 
         binding = FragmentHomeBinding.inflate(layoutInflater)
 
@@ -44,6 +53,10 @@ class HomeFragment : Fragment() {
         categoryItem.add(DummyData("350", "Air Activities"))
         categoryItem.add(DummyData("350", "Active & Fun"))
 
+        searchItems1.add(DummyData("350", "All"))
+        searchItems1.add(DummyData("350", "Air Activities"))
+        searchItems1.add(DummyData("350", "Active & Fun"))
+
         categoryItem1.add(DummyData("350", "Air, Helicopter & Balloon Tours"))
         categoryItem1.add(DummyData("350", "Space Travel"))
         categoryItem1.add(DummyData("350", "Para Gliding"))
@@ -51,7 +64,8 @@ class HomeFragment : Fragment() {
         categoryItem1.add(DummyData("350", "Outdoor"))
         categoryItem1.add(DummyData("350", "Rides"))
 
-        binding.rvSearchActivity.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
+        binding.rvSearchActivity.layoutManager =
+            LinearLayoutManager(context, RecyclerView.VERTICAL, false)
         binding.rvSearchActivity.adapter = SearchItemAdapter(searchItems)
         binding.tvActivityDetail1.text = searchItems.size.toString()
 
@@ -59,7 +73,26 @@ class HomeFragment : Fragment() {
             filterDialog()
         }
 
+        binding.etSearchActivity.setOnClickListener {
+            searchDialog()
+        }
+
         return binding.root
+    }
+
+    private fun searchDialog() {
+        val dialogSearchLayoutBinding = DialogSearchLayoutBinding.inflate(layoutInflater)
+        val dialog = context?.let { it1 -> Dialog(it1, R.style.Dialog) }
+        val window = dialog!!.window
+        val wlp = window!!.attributes
+        dialog?.setContentView(dialogSearchLayoutBinding.root)
+        dialog?.show()
+
+
+        dialogSearchLayoutBinding.rvDialogSearchActivity.layoutManager =
+            LinearLayoutManager(context, RecyclerView.VERTICAL, false)
+        dialogSearchLayoutBinding.rvDialogSearchActivity.adapter =
+            SearchActivityDialogAdapter(searchItems1)
     }
 
     private fun filterDialog() {
@@ -69,7 +102,8 @@ class HomeFragment : Fragment() {
         dialog?.setContentView(filterBottomSheet.root)
         dialog?.show()
 
-        filterBottomSheet.rvCategory.layoutManager = FlowLayoutManager().setAlignment(Alignment.LEFT)
+        filterBottomSheet.rvCategory.layoutManager =
+            FlowLayoutManager().setAlignment(Alignment.LEFT)
         filterBottomSheet.rvCategory.adapter = CategoryAdapter(categoryItem)
 
 
@@ -78,7 +112,8 @@ class HomeFragment : Fragment() {
         flowLayoutManager.isAutoMeasureEnabled = true
         filterBottomSheet.rvCategory1.layoutManager = flowLayoutManager
 
-        filterBottomSheet.rvCategory1.layoutManager = FlowLayoutManager().setAlignment(Alignment.LEFT)
+        filterBottomSheet.rvCategory1.layoutManager =
+            FlowLayoutManager().setAlignment(Alignment.LEFT)
         filterBottomSheet.rvCategory1.adapter = CategoryAdapter1(categoryItem1)
     }
 }
