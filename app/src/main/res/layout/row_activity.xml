@@ -42,7 +42,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <com.tickitbookit.controls.CTextView
+    <com.tickitbookit.controls.CTextViewSemibold
         android:id="@+id/CTextView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
         app:layout_constraintEnd_toEndOf="parent">
 
 
-        <com.tickitbookit.controls.CTextView
+        <com.tickitbookit.controls.CTextViewSemibold
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="From/"
@@ -78,7 +78,7 @@
             android:textSize="@dimen/_10sdp" />
 
 
-        <com.tickitbookit.controls.CTextView
+        <com.tickitbookit.controls.CTextViewSemibold
             android:id="@+id/tvPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -117,14 +117,13 @@
         app:layout_constraintTop_toBottomOf="@+id/CTextView" />
 
 
-    <com.tickitbookit.controls.CTextView
+    <com.tickitbookit.controls.CTextViewLight
         android:id="@+id/tvHour"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="16dp"
         android:text="9 hrs, 30 Mins"
-        android:alpha="0.5"
         android:textSize="@dimen/_11sdp"
         android:textColor="@color/textGray"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
@@ -144,12 +143,11 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
 
-    <com.tickitbookit.controls.CTextView
+    <com.tickitbookit.controls.CTextViewLight
         android:id="@+id/tvInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:alpha="0.5"
         android:text="Instant Confirmation"
         android:textColor="@color/textGray"
         android:textSize="@dimen/_11sdp"
@@ -170,12 +168,11 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
 
-    <com.tickitbookit.controls.CTextView
+    <com.tickitbookit.controls.CTextViewLight
         android:id="@+id/tvRefundable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:alpha="0.5"
         android:text="Refundable"
         android:textColor="@color/textGray"
         android:textSize="@dimen/_11sdp"
@@ -184,7 +181,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView6" />
 
 
-    <com.tickitbookit.controls.CTextView
+    <com.tickitbookit.controls.CTextViewSemibold
         android:layout_width="wrap_content"
         android:layout_height="@dimen/_30sdp"
         android:layout_marginEnd="16dp"
@@ -195,9 +192,8 @@
         android:paddingEnd="@dimen/_13sdp"
         android:paddingBottom="@dimen/_3sdp"
         android:text="Book Now"
-        android:textSize="@dimen/_14sdp"
+        android:textSize="@dimen/_11sdp"
         android:textColor="@color/white"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/tvRefundable"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tvRefundable" />

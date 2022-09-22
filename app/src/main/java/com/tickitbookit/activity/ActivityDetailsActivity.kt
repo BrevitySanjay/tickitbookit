@@ -1,37 +1,84 @@
 package com.tickitbookit.activity
 
+import android.app.DatePickerDialog
+import android.content.Intent
 import android.os.Bundle
+import android.widget.CalendarView
 import androidx.recyclerview.widget.GridLayoutManager
-import com.tickitbookit.adapter.GalleryAdapter
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.applandeo.materialcalendarview.CalendarView.ONE_DAY_PICKER
+import com.applandeo.materialcalendarview.builders.DatePickerBuilder
+import com.applandeo.materialcalendarview.listeners.OnSelectDateListener
+import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.tickitbookit.R
+import com.tickitbookit.adapter.GalleryDetailAdapter
+import com.tickitbookit.adapter.NearByAdapter
 import com.tickitbookit.classes.CustomAppCompatActivity
-import com.tickitbookit.databinding.ActivityGalleryBinding
+import com.tickitbookit.databinding.ActivityDetailsBinding
+import com.tickitbookit.databinding.CalenderBottomSheetBinding
 import com.tickitbookit.moels.DummyData
+import java.util.*
+import kotlin.collections.ArrayList
 
 class ActivityDetailsActivity : CustomAppCompatActivity() {
 
+    private lateinit var binding: ActivityDetailsBinding
     private val searchItems = ArrayList<DummyData>()
-    private lateinit var binding: ActivityGalleryBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityGalleryBinding.inflate(layoutInflater)
+        binding = ActivityDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        searchItems.add(DummyData("350", "350"))
+        searchItems.add(DummyData("350", "550"))
+        searchItems.add(DummyData("350", "632"))
+        searchItems.add(DummyData("350", "77"))
+        searchItems.add(DummyData("350", "20"))
+        searchItems.add(DummyData("350", "1050"))
 
-        searchItems.add(DummyData("350","Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing"))
-        searchItems.add(DummyData("350","Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing"))
-        searchItems.add(DummyData("350","Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing"))
-        searchItems.add(DummyData("350","Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing"))
-        searchItems.add(DummyData("350","Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing"))
-        searchItems.add(DummyData("350","Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing"))
+        binding.rvGallery.layoutManager = GridLayoutManager(this, 4)
+        binding.rvGallery.adapter = GalleryDetailAdapter(searchItems)
 
-        binding.rvGallery.layoutManager = GridLayoutManager(this, 2)
-        binding.rvGallery.adapter = GalleryAdapter(searchItems)
-/*
-        rvNearByActivities.layoutManager = GridLayoutManager(this, 2)
-        rvNearByActivities.adapter = GalleryAdapter(searchItems)
+        binding.rvNearByActivities.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        binding.rvNearByActivities.adapter = NearByAdapter(searchItems)
 
-        pop_ratingbar.numStars = 5*/
+        viewClick()
+    }
+
+    private fun viewClick(){
+
+        binding.imgBack.setOnClickListener {
+            finish()
+        }
+
+        binding.viewGalleryImages.setOnClickListener {
+            startActivity(Intent(this,GalleryActivity::class.java))
+        }
+
+        binding.tvTime.setOnClickListener {
+            calenderDialog()
+        }
+
 
     }
+
+    private fun calenderDialog() {
+
+        val calenderSheet  = CalenderBottomSheetBinding.inflate(layoutInflater)
+        val dialog = BottomSheetDialog(this, R.style.SheetDialog)
+        dialog.setCancelable(false)
+        dialog.setContentView(calenderSheet.root)
+        dialog.show()
+
+
+        calenderSheet.imgClose.setOnClickListener { dialog.dismiss() }
+
+
+        /*DatePickerBuilder(this) {}
+            .date(Calendar.getInstance())
+            .previousButtonSrc(R.drawable.ic_right)
+            .forwardButtonSrc(R.drawable.ic_left)*/
+    }
+
 }

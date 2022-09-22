@@ -1,5 +1,6 @@
 package com.tickitbookit.fragment
 
+import android.graphics.Rect
 import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.tickitbookit.R
 import com.tickitbookit.adapter.CategoryAdapter
@@ -26,21 +28,23 @@ class HomeFragment : Fragment() {
 
 
     private lateinit var binding: FragmentHomeBinding
-
     private val searchItems = ArrayList<DummyData>()
     private val searchItems1 = ArrayList<DummyData>()
     private val categoryItem = ArrayList<DummyData>()
     private val categoryItem1 = ArrayList<DummyData>()
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
+    private lateinit var category1Manager: FlowLayoutManager
+    lateinit var categoryManager: FlowLayoutManager
 
+    var itemDecoration: ItemDecoration = object : ItemDecoration() {
+        override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
+            super.getItemOffsets(outRect, view, parent, state)
+            outRect[5, 5, 5] = 5
+        }
+    }
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentHomeBinding.inflate(layoutInflater)
-
-        //val view: View = inflater.inflate(FragmentHomeBinding.inflate(layoutInflater).root, container, false)
 
         searchItems.add(DummyData("350", "350"))
         searchItems.add(DummyData("350", "550"))
@@ -69,6 +73,13 @@ class HomeFragment : Fragment() {
         binding.rvSearchActivity.adapter = SearchItemAdapter(searchItems)
         binding.tvActivityDetail1.text = searchItems.size.toString()
 
+        viewClick()
+
+        return binding.root
+    }
+
+
+    private fun viewClick(){
         binding.filter.setOnClickListener {
             filterDialog()
         }
@@ -99,21 +110,24 @@ class HomeFragment : Fragment() {
 
         val filterBottomSheet = FilterBottomSheetBinding.inflate(layoutInflater)
         val dialog = context?.let { it1 -> BottomSheetDialog(it1, R.style.SheetDialog) }
+        dialog?.setCancelable(false)
         dialog?.setContentView(filterBottomSheet.root)
         dialog?.show()
 
-        filterBottomSheet.rvCategory.layoutManager =
-            FlowLayoutManager().setAlignment(Alignment.LEFT)
+        categoryManager = FlowLayoutManager().setAlignment(Alignment.LEFT)
+        categoryManager.isAutoMeasureEnabled = true
+        filterBottomSheet.rvCategory.layoutManager = categoryManager
         filterBottomSheet.rvCategory.adapter = CategoryAdapter(categoryItem)
+        filterBottomSheet.rvCategory.addItemDecoration(itemDecoration)
 
-
-        (filterBottomSheet.rvCategory1.layoutManager as FlowLayoutManager).removeItemPerLineLimit()
-        val flowLayoutManager = FlowLayoutManager()
-        flowLayoutManager.isAutoMeasureEnabled = true
-        filterBottomSheet.rvCategory1.layoutManager = flowLayoutManager
-
-        filterBottomSheet.rvCategory1.layoutManager =
-            FlowLayoutManager().setAlignment(Alignment.LEFT)
+        category1Manager = FlowLayoutManager().setAlignment(Alignment.LEFT)
+        category1Manager.isAutoMeasureEnabled = true
+        filterBottomSheet.rvCategory1.layoutManager = category1Manager
         filterBottomSheet.rvCategory1.adapter = CategoryAdapter1(categoryItem1)
+        filterBottomSheet.rvCategory1.addItemDecoration(itemDecoration)
+
+        filterBottomSheet.imgClose.setOnClickListener {
+            dialog?.dismiss()
+        }
     }
 }

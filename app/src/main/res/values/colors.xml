@@ -8,7 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="textGreen">#5CB85C</color>
-    <color name="textGray">#53585A</color>
+    <color name="textGray">#5553585A</color>
+    <color name="textGrayDark">#53585A</color>
     <color name="textLightGray">#53585A</color>
     <color name="ratings_yellow">#DBDF00</color>
     <color name="transparent">#ffffffff</color>

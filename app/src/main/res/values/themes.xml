@@ -70,7 +70,7 @@
     </style>
 
     <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
-        <item name="behavior_peekHeight">450dp</item>
+        <item name="behavior_peekHeight">480dp</item>
         <item name="android:background">@drawable/top_corner_radius_sheet</item>
     </style>
 
@@ -83,6 +83,23 @@
         <item name="cornerSizeTopLeft">@dimen/_15sdp</item>
         <item name="cornerSizeBottomRight">@dimen/_15sdp</item>
         <item name="cornerSizeBottomLeft">@dimen/_15sdp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="ImageView.4Corner10" parent="">
+        <item name="cornerSizeTopRight">@dimen/_10sdp</item>
+        <item name="cornerSizeTopLeft">@dimen/_10sdp</item>
+        <item name="cornerSizeBottomRight">@dimen/_10sdp</item>
+        <item name="cornerSizeBottomLeft">@dimen/_10sdp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+
+    <style name="ImageView.4Corner5" parent="">
+        <item name="cornerSizeTopRight">@dimen/_5sdp</item>
+        <item name="cornerSizeTopLeft">@dimen/_5sdp</item>
+        <item name="cornerSizeBottomRight">@dimen/_5sdp</item>
+        <item name="cornerSizeBottomLeft">@dimen/_5sdp</item>
         <item name="cornerFamily">rounded</item>
     </style>
 

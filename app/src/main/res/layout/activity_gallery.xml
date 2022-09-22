@@ -7,12 +7,11 @@
     android:layout_height="match_parent"
     tools:context=".activity.GalleryActivity">
 
-
     <ImageView
         android:id="@+id/imgBack"
         android:layout_width="@dimen/_33sdp"
         android:layout_height="@dimen/_33sdp"
-        android:padding="@dimen/_3sdp"
+        android:padding="@dimen/_5sdp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/ic_arrow_left"
@@ -26,7 +25,7 @@
         android:layout_height="wrap_content"
         android:text="@string/gallery"
         android:textColor="@color/black"
-        android:textSize="@dimen/_16sdp"
+        android:textSize="@dimen/_15sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imgBack"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,7 +43,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CTextView4" />
+        app:layout_constraintTop_toBottomOf="@+id/CTextView4"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

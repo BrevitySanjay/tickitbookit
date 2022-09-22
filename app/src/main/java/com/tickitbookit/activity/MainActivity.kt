@@ -8,7 +8,11 @@ import com.tickitbookit.fragment.MainHomeFragment
 
 class MainActivity : CustomAppCompatActivity() {
 
+    /** CREATED BY SANJAY DAMOR Mon Sep 12 16:52:50 IST 2022 **/
+
     private lateinit var binding: ActivityMainBinding
+    private lateinit var mainHomeFragment : MainHomeFragment
+
 
     /** CREATE NEW BRANCH **/
 
@@ -17,8 +21,9 @@ class MainActivity : CustomAppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportFragmentManager.beginTransaction().replace(R.id.content, MainHomeFragment(), "")
-            .commit()
+        mainHomeFragment = MainHomeFragment()
+
+        defaultFragment()
 
         //bottomNavigation.itemIconTintList = null
         binding.bottomNavigation.setOnNavigationItemSelectedListener(selectedListener);
@@ -26,13 +31,15 @@ class MainActivity : CustomAppCompatActivity() {
     }
 
 
+    private fun defaultFragment(){
+        supportFragmentManager.beginTransaction().replace(R.id.content, mainHomeFragment, "").commit()
+    }
+
     private val selectedListener =
         BottomNavigationView.OnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
-
                 R.id.home -> {
-                    supportFragmentManager.beginTransaction()
-                        .replace(R.id.content, MainHomeFragment(), "HOME").commit()
+                    defaultFragment()
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.favourite -> {
@@ -47,4 +54,12 @@ class MainActivity : CustomAppCompatActivity() {
             }
             false
         }
+
+    override fun onBackPressed() {
+        if (!mainHomeFragment.isAdded){
+            defaultFragment()
+        }else{
+            finish()
+        }
+    }
 }
