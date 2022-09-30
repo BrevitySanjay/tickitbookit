@@ -11,12 +11,17 @@ import com.applandeo.materialcalendarview.builders.DatePickerBuilder
 import com.applandeo.materialcalendarview.listeners.OnSelectDateListener
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.tickitbookit.R
+import com.tickitbookit.adapter.CategoryAdapter
+import com.tickitbookit.adapter.CategoryAdapter1
 import com.tickitbookit.adapter.GalleryDetailAdapter
 import com.tickitbookit.adapter.NearByAdapter
 import com.tickitbookit.classes.CustomAppCompatActivity
 import com.tickitbookit.databinding.ActivityDetailsBinding
 import com.tickitbookit.databinding.CalenderBottomSheetBinding
+import com.tickitbookit.databinding.FilterBottomSheetBinding
 import com.tickitbookit.moels.DummyData
+import com.xiaofeng.flowlayoutmanager.Alignment
+import com.xiaofeng.flowlayoutmanager.FlowLayoutManager
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -59,26 +64,5 @@ class ActivityDetailsActivity : CustomAppCompatActivity() {
         binding.tvTime.setOnClickListener {
             calenderDialog()
         }
-
-
     }
-
-    private fun calenderDialog() {
-
-        val calenderSheet  = CalenderBottomSheetBinding.inflate(layoutInflater)
-        val dialog = BottomSheetDialog(this, R.style.SheetDialog)
-        dialog.setCancelable(false)
-        dialog.setContentView(calenderSheet.root)
-        dialog.show()
-
-
-        calenderSheet.imgClose.setOnClickListener { dialog.dismiss() }
-
-
-        /*DatePickerBuilder(this) {}
-            .date(Calendar.getInstance())
-            .previousButtonSrc(R.drawable.ic_right)
-            .forwardButtonSrc(R.drawable.ic_left)*/
-    }
-
 }

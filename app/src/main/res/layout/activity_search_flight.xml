@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SearchFlightActivity"
+    android:background="@color/white">
+
+
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:padding="@dimen/_4sdp"
+        android:src="@drawable/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/back"
+        app:layout_constraintEnd_toStartOf="@+id/edit"
+        app:layout_constraintStart_toEndOf="@+id/back"
+        app:layout_constraintTop_toTopOf="@+id/back">
+
+
+        <com.tickitbookit.controls.CTextView
+            android:id="@+id/routName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:text="Mumbai to Kolkata" />
+
+
+        <com.tickitbookit.controls.CTextViewLight
+            android:id="@+id/flightDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11sdp"
+            android:text="02 Jul | 1 Adult | Economy" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/edit"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginEnd="16dp"
+        android:padding="@dimen/_4sdp"
+        android:src="@drawable/ic_edit"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout4" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="8dp"
+        android:elevation="@dimen/_3sdp"
+        android:background="@color/grayLight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/back"
+        app:layout_constraintTop_toBottomOf="@+id/view2">
+
+        <LinearLayout
+            android:id="@+id/linearLayout7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/_1sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <LinearLayout
+                android:id="@+id/llFlightDate1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/round_left_green"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/_8sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <com.tickitbookit.controls.CTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:rotation="90"
+                    android:rotationX="180"
+                    android:rotationY="180"
+                    android:text="FEB"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMonthDay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_85sdp"
+                android:paddingTop="@dimen/_1sdp"
+                android:paddingEnd="@dimen/_1sdp"
+                android:paddingBottom="@dimen/_1sdp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/CTextView15"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:drawableStart="@drawable/ic_plan_blue"
+        android:drawablePadding="@dimen/_10sdp"
+        android:text="Select your journey from bottom flight list "
+        android:textColor="@color/textGrayDark"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintEnd_toEndOf="@+id/edit"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Mumbai to Kolkata"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/edit"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/CTextView15" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFlightList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="50dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/edit"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/tvResult" />
+
+
+    <ImageView
+        android:id="@+id/btnFilter"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:elevation="@dimen/_10sdp"
+        android:src="@drawable/ic_filter_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/rvFlightList"
+        app:layout_constraintEnd_toEndOf="@+id/rvFlightList"
+        app:layout_constraintTop_toTopOf="@+id/rvFlightList"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.MultiCityFragment">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/_8sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.tickitbookit.controls.CTextView
+            android:id="@+id/dayName"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="To"
+            android:paddingEnd="@dimen/_8sdp"
+            android:textColor="@color/textGrayDark"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="bold" />
+
+
+        <com.tickitbookit.controls.CTextView
+            android:id="@+id/fromDayName"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="From"
+            android:paddingEnd="@dimen/_8sdp"
+            android:textColor="@color/textGrayDark"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="bold" />
+
+
+        <com.tickitbookit.controls.CTextView
+            android:id="@+id/date"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Departure"
+            android:gravity="center"
+            android:paddingEnd="@dimen/_8sdp"
+            android:textColor="@color/textGrayDark"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTripCountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+
+    <com.tickitbookit.controls.CTextViewLight
+        android:id="@+id/btnAddCity"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_corner_blue_50"
+        android:padding="@dimen/_8sdp"
+        android:text="Add City"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintEnd_toEndOf="@+id/rvTripCountry"
+        app:layout_constraintTop_toBottomOf="@+id/rvTripCountry" />
+
+
+    <com.tickitbookit.controls.CTextViewSemibold
+        android:id="@+id/CTextViewSemibold2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/traveller"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintStart_toStartOf="@+id/rvTripCountry"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddCity" />
+
+
+    <com.tickitbookit.controls.CTextViewSemibold
+        android:id="@+id/travelDetail"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/round_corner_gray"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/_15sdp"
+        android:text="2 Adult, 1 Child,\n1 Infants"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintEnd_toStartOf="@+id/travelClass"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CTextViewSemibold2" />
+
+
+    <com.tickitbookit.controls.CTextViewSemibold
+        android:id="@+id/tvClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Class"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/CTextViewSemibold2"
+        app:layout_constraintEnd_toEndOf="@+id/travelClass"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/travelClass"
+        app:layout_constraintTop_toTopOf="@+id/CTextViewSemibold2" />
+
+
+    <com.tickitbookit.controls.CTextViewSemibold
+        android:id="@+id/travelClass"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/round_corner_gray"
+        android:gravity="center"
+        android:text="Premium Economy"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/travelDetail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/travelDetail"
+        app:layout_constraintTop_toTopOf="@+id/travelDetail" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

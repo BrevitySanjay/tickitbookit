@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/shadowBg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_1sdp"
+        android:visibility="gone"
+        android:background="@drawable/round_corner_blue"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/flightItemLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/dotLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dot_line_gray"
+                app:layout_constraintBottom_toBottomOf="@+id/tvTime"
+                app:layout_constraintEnd_toStartOf="@+id/tvBom"
+                app:layout_constraintStart_toEndOf="@+id/tvCcu"
+                app:layout_constraintTop_toTopOf="@+id/tvCcu" />
+
+            <ImageView
+                android:id="@+id/imgPlan"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_17sdp"
+                android:src="@drawable/ic_plan"
+                app:layout_constraintBottom_toBottomOf="@+id/tvTime"
+                app:layout_constraintEnd_toStartOf="@+id/tvBom"
+                app:layout_constraintStart_toEndOf="@+id/tvCcu"
+                app:layout_constraintTop_toTopOf="@+id/tvCcu" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/shapeableImageView2">
+
+
+                <com.tickitbookit.controls.CTextViewSemibold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="From/"
+                    android:textColor="@color/textGreen"
+                    android:textSize="@dimen/_10sdp" />
+
+
+                <com.tickitbookit.controls.CTextViewSemibold
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$550"
+                    android:textColor="@color/textGreen"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/shapeableImageView2"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dummyimage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/circleImageView" />
+
+            <com.tickitbookit.controls.CTextView
+                android:id="@+id/CTextView14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="SG 8107, SG 3028"
+                android:textColor="@color/textGrayDark"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="@+id/CTextViewSemibold3"
+                app:layout_constraintTop_toBottomOf="@+id/CTextViewSemibold3" />
+
+            <com.tickitbookit.controls.CTextView
+                android:id="@+id/tvCcu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="32dp"
+                android:text="CCU"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shapeableImageView2" />
+
+            <com.tickitbookit.controls.CTextView
+                android:id="@+id/tvBom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:text="BOM"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvCcu" />
+
+            <com.tickitbookit.controls.CTextView
+                android:id="@+id/tvFlightTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="2 hrs 10 min"
+                android:textColor="@color/grayLight"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toTopOf="@+id/imgPlan"
+                app:layout_constraintEnd_toStartOf="@+id/tvBom"
+                app:layout_constraintHorizontal_bias="0.505"
+                app:layout_constraintStart_toEndOf="@+id/tvCcu" />
+
+            <com.tickitbookit.controls.CTextView
+                android:id="@+id/tvFlightStop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="16dp"
+                android:text="Non-Stop"
+                android:textColor="@color/grayLight"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tvBomTime"
+                app:layout_constraintStart_toEndOf="@+id/tvTime"
+                app:layout_constraintTop_toBottomOf="@+id/imgPlan" />
+
+            <com.tickitbookit.controls.CTextViewSemibold
+                android:id="@+id/CTextViewSemibold3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="SpiceJet"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toEndOf="@+id/shapeableImageView2"
+                app:layout_constraintTop_toTopOf="@+id/shapeableImageView2" />
+
+            <com.tickitbookit.controls.CTextViewSemibold
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="13:00"
+                android:textColor="@color/grayLight"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tvCcu"
+                app:layout_constraintStart_toStartOf="@+id/tvCcu"
+                app:layout_constraintTop_toBottomOf="@+id/tvCcu" />
+
+            <com.tickitbookit.controls.CTextViewSemibold
+                android:id="@+id/tvBomTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="13:00"
+                android:textColor="@color/grayLight"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tvBom"
+                app:layout_constraintStart_toStartOf="@+id/tvBom"
+                app:layout_constraintTop_toBottomOf="@+id/tvBom" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
