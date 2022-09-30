@@ -29,7 +29,6 @@ class MainActivity : CustomAppCompatActivity() {
 
     }
 
-
     private fun defaultFragment(){
         supportFragmentManager.beginTransaction().replace(R.id.content, mainHomeFragment, "").commit()
     }
