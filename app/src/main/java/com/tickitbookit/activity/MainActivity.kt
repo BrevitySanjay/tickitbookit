@@ -13,7 +13,6 @@ class MainActivity : CustomAppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var mainHomeFragment : MainHomeFragment
 
-
     /** CREATE NEW BRANCH **/
 
     override fun onCreate(savedInstanceState: Bundle?) {
