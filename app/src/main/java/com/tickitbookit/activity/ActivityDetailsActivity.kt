@@ -98,21 +98,5 @@ class ActivityDetailsActivity : CustomAppCompatActivity() {
         }
     }
 
-    private fun calenderDialog() {
-        val calenderSheet = CalenderBottomSheetBinding.inflate(layoutInflater)
-        val dialog = BottomSheetDialog(this, R.style.SheetDialog)
-        dialog.setCancelable(false)
-        dialog.setContentView(calenderSheet.root)
-        dialog.show()
-
-
-        calenderSheet.imgClose.setOnClickListener { dialog.dismiss() }
-
-
-        /*DatePickerBuilder(this) {}
-            .date(Calendar.getInstance())
-            .previousButtonSrc(R.drawable.ic_right)
-            .forwardButtonSrc(R.drawable.ic_left)*/
-    }
 
 }
