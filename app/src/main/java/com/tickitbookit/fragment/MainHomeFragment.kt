@@ -1,5 +1,6 @@
 package com.tickitbookit.fragment
 
+import android.app.Activity
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
@@ -93,8 +94,8 @@ class MainHomeFragment : Fragment() {
 
         binding.tabFlights.setOnClickListener {
             Handler().postDelayed({
-                changeFragment(FlightBookingFragment())
-            }, 200)
+                changeFragment(FlightBookingFragment(context as Activity))
+            }, 100)
             selectTab(binding.tabFlights)
         }
         binding.tabHotels.setOnClickListener {

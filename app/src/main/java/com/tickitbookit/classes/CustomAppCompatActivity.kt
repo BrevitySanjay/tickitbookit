@@ -1,14 +1,19 @@
 package com.tickitbookit.classes
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.snackbar.Snackbar
 import com.tickitbookit.MyApp
+import com.tickitbookit.R
+import com.tickitbookit.databinding.CalenderBottomSheetBinding
 import com.tickitbookit.utils.ConnectionLiveData
 import com.tickitbookit.utils.InitApplication
 import com.tickitbookit.utils.LoadingDialog
@@ -24,6 +29,12 @@ abstract class CustomAppCompatActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+            window.statusBarColor = ContextCompat.getColor(this,R.color.white)
+        }
+
 
         ConnectionLiveData(this).observe(this, Observer<Boolean> { t ->
             MyApp.isInternetAvailable = t!!
@@ -99,6 +110,20 @@ abstract class CustomAppCompatActivity : AppCompatActivity() {
 
     fun showAuthErrorDialog() {
         showToast("Auth Error")
+    }
+
+
+
+    fun calenderDialog() {
+
+        val calenderSheet  = CalenderBottomSheetBinding.inflate(layoutInflater)
+        val dialog = BottomSheetDialog(this, R.style.SheetDialog)
+        dialog.setCancelable(false)
+        dialog.setContentView(calenderSheet.root)
+        dialog.show()
+
+        calenderSheet.imgClose.setOnClickListener { dialog.dismiss() }
+
     }
 
 

@@ -14,7 +14,7 @@ class MainActivity : CustomAppCompatActivity() {
     private lateinit var mainHomeFragment : MainHomeFragment
 
 
-    /** CREATE NEW BRANCH **/
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +29,6 @@ class MainActivity : CustomAppCompatActivity() {
         binding.bottomNavigation.setOnNavigationItemSelectedListener(selectedListener);
 
     }
-
 
     private fun defaultFragment(){
         supportFragmentManager.beginTransaction().replace(R.id.content, mainHomeFragment, "").commit()

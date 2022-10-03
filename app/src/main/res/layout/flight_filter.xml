@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/top_corner_radius_sheet">
+
+    <ImageView
+        android:id="@+id/imgClose"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/ic_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/CTextView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/filter"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imgClose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgClose" />
+
+
+    <com.tickitbookit.controls.CTextViewLight
+        android:id="@+id/tvReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/reset"
+        android:textColor="@color/textGray"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/CTextView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/CTextView5" />
+
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/tvClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Class"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imgClose"
+        app:layout_constraintTop_toBottomOf="@+id/imgClose" />
+
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/tvReset1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/reset"
+        android:textColor="@color/textGray"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvClass"
+        app:layout_constraintEnd_toEndOf="@+id/tvReset"
+        app:layout_constraintTop_toBottomOf="@+id/tvReset" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFlightStop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvReset1"
+        app:layout_constraintStart_toStartOf="@+id/tvClass"
+        app:layout_constraintTop_toBottomOf="@+id/tvClass" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="0.8dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/grayLight"
+        app:layout_constraintEnd_toEndOf="@+id/rvFlightStop"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/rvFlightStop"
+        app:layout_constraintTop_toBottomOf="@+id/rvFlightStop" />
+
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/tvPriceRange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/price_range"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/tvResetPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset"
+        android:textColor="@color/textGray"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPriceRange"
+        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintTop_toTopOf="@+id/tvPriceRange" />
+
+
+    <com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar
+        android:id="@+id/rangeSeekbar3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:bar_color="@color/purple_200"
+        app:bar_height="@dimen/thumb_height"
+        app:corner_radius="10"
+        app:layout_constraintEnd_toEndOf="@+id/tvResetPrice"
+        app:layout_constraintStart_toStartOf="@+id/tvPriceRange"
+        app:layout_constraintTop_toBottomOf="@+id/tvPriceRange"
+        app:left_thumb_image="@drawable/range_thumb"
+        app:left_thumb_image_pressed="@drawable/range_thumb"
+        app:max_start_value="2500"
+        app:max_value="5000"
+        app:min_value="100"
+        app:right_thumb_image="@drawable/range_thumb"
+        app:right_thumb_image_pressed="@drawable/range_thumb" />
+
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="0.8dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/grayLight"
+        app:layout_constraintEnd_toEndOf="@+id/rangeSeekbar3"
+        app:layout_constraintStart_toStartOf="@+id/tvPriceRange"
+        app:layout_constraintTop_toBottomOf="@+id/rangeSeekbar3" />
+
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/tvFareType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/fare_type"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/tvResetFare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset"
+        android:textColor="@color/textGray"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvFareType"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/tvFareType" />
+
+
+    <ImageView
+        android:id="@+id/imgRefund"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_refund_unselect"
+        app:layout_constraintStart_toStartOf="@+id/tvFareType"
+        app:layout_constraintTop_toBottomOf="@+id/tvFareType" />
+
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/tvRefund"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Refundable"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgRefund"
+        app:layout_constraintEnd_toEndOf="@+id/tvResetFare"
+        app:layout_constraintStart_toEndOf="@+id/imgRefund"
+        app:layout_constraintTop_toTopOf="@+id/imgRefund" />
+
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="0dp"
+        android:layout_height="0.8dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/grayLight"
+        app:layout_constraintEnd_toEndOf="@+id/tvRefund"
+        app:layout_constraintStart_toStartOf="@+id/imgRefund"
+        app:layout_constraintTop_toBottomOf="@+id/imgRefund" />
+
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/tvTimes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/departure_times"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/view4"
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/tvResetTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset"
+        android:textColor="@color/textGray"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTimes"
+        app:layout_constraintEnd_toEndOf="@+id/view4"
+        app:layout_constraintTop_toTopOf="@+id/tvTimes" />
+
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="From Kolkata"
+        android:textColor="@color/textGray"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintStart_toStartOf="@+id/tvTimes"
+        app:layout_constraintTop_toBottomOf="@+id/tvTimes" />
+
+
+    <LinearLayout
+        android:id="@+id/llCloudy"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/round_corner_gray_10"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/llSunny"
+        app:layout_constraintStart_toStartOf="@+id/tvTime"
+        app:layout_constraintTop_toBottomOf="@+id/tvTime">
+
+
+        <ImageView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:padding="@dimen/_3sdp"
+            android:src="@drawable/ic_orion_partly_cloudy" />
+
+
+        <com.tickitbookit.controls.CTextView
+            android:id="@+id/tvCloudy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="05 - 12"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llSunny"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/round_corner_blue"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/llCloudy"
+        app:layout_constraintEnd_toStartOf="@+id/llSunrise"
+        app:layout_constraintStart_toEndOf="@+id/llCloudy"
+        app:layout_constraintTop_toTopOf="@+id/llCloudy"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <ImageView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:padding="@dimen/_3sdp"
+            android:src="@drawable/ic_sunny" />
+
+
+        <com.tickitbookit.controls.CTextView
+            android:id="@+id/tvSunny"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12 - 18"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSunrise"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/round_corner_gray_10"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/llSunny"
+        app:layout_constraintEnd_toStartOf="@+id/llNight"
+        app:layout_constraintStart_toEndOf="@+id/llSunny"
+        app:layout_constraintTop_toTopOf="@+id/llSunny">
+
+
+        <ImageView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:padding="@dimen/_3sdp"
+            android:src="@drawable/ic_sunrise" />
+
+
+        <com.tickitbookit.controls.CTextView
+            android:id="@+id/tvSunrise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18 - 23"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llNight"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/round_corner_gray_10"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/llSunrise"
+        app:layout_constraintEnd_toEndOf="@+id/tvResetTime"
+        app:layout_constraintStart_toEndOf="@+id/llSunrise"
+        app:layout_constraintTop_toTopOf="@+id/llSunrise">
+
+
+        <ImageView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/ic_moon" />
+
+
+        <com.tickitbookit.controls.CTextView
+            android:id="@+id/tvNight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="23 - 05"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+
+    </LinearLayout>
+
+    <com.tickitbookit.controls.CTextViewSemibold
+        android:id="@+id/btnApply"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/bg_button"
+        android:gravity="center"
+        android:text="Apply"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/llNight"
+        app:layout_constraintStart_toStartOf="@+id/llCloudy"
+        app:layout_constraintTop_toBottomOf="@+id/llSunny"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

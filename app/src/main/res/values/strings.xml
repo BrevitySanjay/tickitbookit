@@ -56,4 +56,11 @@ This option was created based on customer feedback to offer an alternative itine
     <string name="participants">Participants</string>
     <string name="number_of_adults">Number of Adults</string>
     <string name="age_13_years_and_above">Age 13 years and above</string>
+    <string name="departure">Departure</string>
+    <string name="add_return_date">Add Return date</string>
+    <string name="save_more_on_round_trips">Save more on round trips!</string>
+    <string name="traveller">Traveller</string>
+    <string name="search_flight">Search Flight</string>
+    <string name="fare_type">Fare Type</string>
+    <string name="departure_times">Departure Times</string>
 </resources>

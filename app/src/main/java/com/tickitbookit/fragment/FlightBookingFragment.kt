@@ -1,30 +1,31 @@
 package com.tickitbookit.fragment
 
+import android.app.Activity
+import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.tickitbookit.R
+import com.tickitbookit.activity.SearchFlightActivity
+import com.tickitbookit.classes.CustomFragment
 import com.tickitbookit.databinding.FragmentFlightBookingBinding
-import com.tickitbookit.databinding.FragmentHomeBinding
+import com.tickitbookit.hide
+import com.tickitbookit.show
 
-class FlightBookingFragment : Fragment() {
+class FlightBookingFragment(context : Activity) : CustomFragment(context) {
 
     private lateinit var binding: FragmentFlightBookingBinding
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentFlightBookingBinding.inflate(inflater)
         viewClick()
         changeBackground(binding.btnOneWay)
-        changeCurrentFragment(TripFragment())
         return binding.root
     }
 
@@ -35,16 +36,45 @@ class FlightBookingFragment : Fragment() {
         }
 
         binding.btnOneWay.setOnClickListener {
+            binding.tvRoundTripDate.hide()
+            binding.tvAddReturnDate.show()
+            binding.CTextViewLight.show()
+            binding.parentFragment.hide()
             changeBackground(binding.btnOneWay)
-            changeCurrentFragment(TripFragment())
         }
 
-        binding.btnMultiCity.setOnClickListener { changeBackground(binding.btnMultiCity) }
+        binding.btnMultiCity.setOnClickListener {
+            changeCurrentFragment(MultiCityFragment(context as Activity))
+            binding.parentFragment.show()
+            changeBackground(binding.btnMultiCity)
+        }
 
-        binding.btnRoundTrip.setOnClickListener { changeBackground(binding.btnRoundTrip) }
+        binding.btnRoundTrip.setOnClickListener {
+            binding.tvRoundTripDate.show()
+            binding.tvAddReturnDate.hide()
+            binding.CTextViewLight.hide()
+            binding.parentFragment.hide()
+            changeBackground(binding.btnRoundTrip)
+        }
+
+        binding.constraintLayout4.setOnClickListener {
+            binding.btnRoundTrip.performClick()
+            binding.tvRoundTripDate.show()
+            binding.tvAddReturnDate.hide()
+            binding.CTextViewLight.hide()
+        }
+
+        binding.tvRoundTripDate.setOnClickListener {
+            calenderDialog()
+        }
+
+        binding.tvFlightDate.setOnClickListener {
+            calenderDialog()
+        }
+
+        binding.btnSearchFlight.setOnClickListener { startActivity(Intent(context,SearchFlightActivity::class.java)) }
 
     }
-
 
     private fun changeBackground(selectedBtn: TextView) {
 
@@ -57,7 +87,6 @@ class FlightBookingFragment : Fragment() {
         binding.btnRoundTrip.setBackgroundResource(R.drawable.round_corner_dark_gray_border)
         selectedBtn.setBackgroundResource(R.drawable.round_corner_blue_50)
         selectedBtn.setTextColor(Color.parseColor("#FFFFFF"))
-
     }
 
     private fun changeFragment(fragment: Fragment) {
@@ -66,8 +95,9 @@ class FlightBookingFragment : Fragment() {
         ft.commit()
     }
 
-    private fun changeCurrentFragment(fragment : Fragment){
-        activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.parentFragmentContainer, fragment, "")?.commit()
+    private fun changeCurrentFragment(fragment: Fragment) {
+        val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
+        ft.replace(R.id.parentFragment, fragment, "NewFragmentTag")
+        ft.commit()
     }
-
 }

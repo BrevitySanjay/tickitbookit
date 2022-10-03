@@ -23,6 +23,10 @@
             android:name=".activity.AddNewCardActivity"
             android:exported="false" />
         <activity
+            android:name=".activity.SearchFlightActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TickitBookit_Light" />
+        <activity
             android:name=".activity.ActivityDetailsActivity"
             android:exported="false"
             android:theme="@style/Theme.TickitBookit_Light" />
