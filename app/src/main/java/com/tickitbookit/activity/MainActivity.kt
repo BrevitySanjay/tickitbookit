@@ -13,6 +13,9 @@ class MainActivity : CustomAppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var mainHomeFragment : MainHomeFragment
 
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
