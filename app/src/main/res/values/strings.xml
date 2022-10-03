@@ -53,4 +53,7 @@ This option was created based on customer feedback to offer an alternative itine
     <string name="done">Done</string>
     <string name="from">From</string>
     <string name="to">To</string>
+    <string name="participants">Participants</string>
+    <string name="number_of_adults">Number of Adults</string>
+    <string name="age_13_years_and_above">Age 13 years and above</string>
 </resources>

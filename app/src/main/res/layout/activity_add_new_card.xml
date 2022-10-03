@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CardDetailsActivity">
+
+
+    <ImageView
+        android:id="@+id/imgBack"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_arrow_left_black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/CTextView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Card"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imgBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgBack" />
+
+    <com.tickitbookit.controls.CTextViewSemibold
+        android:id="@+id/CTextView5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="Fill your card data"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imgBack"
+        app:layout_constraintTop_toBottomOf="@+id/imgBack" />
+
+    <com.tickitbookit.controls.CTextViewSemibold
+        android:id="@+id/CTextView16"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Card  Holder Name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintEnd_toEndOf="@+id/CTextView5"
+        app:layout_constraintStart_toStartOf="@+id/CTextView5"
+        app:layout_constraintTop_toBottomOf="@+id/CTextView5" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_edittext"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="@+id/CTextView16"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/CTextView16"
+        app:layout_constraintTop_toBottomOf="@+id/CTextView16">
+
+        <com.tickitbookit.controls.CEditText
+            android:id="@+id/CEditText3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@null"
+            android:hint=" dfon ghldfn glndf nglndf glndfa gnld anfgl nadlnfglgljn dag lndaf gjdlas"
+            android:textColor="@color/textGrayDark"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toStartOf="@+id/imageView10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_user"
+            app:layout_constraintBottom_toBottomOf="@+id/CEditText3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/CEditText3"
+            app:layout_constraintVertical_bias="0.50" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/CTextView17"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Card Number"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout4"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout4"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_edittext"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="@+id/CTextView17"
+        app:layout_constraintStart_toStartOf="@+id/CTextView17"
+        app:layout_constraintTop_toBottomOf="@+id/CTextView17">
+
+        <com.tickitbookit.controls.CEditText
+            android:id="@+id/CEditText4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@null"
+            android:ellipsize="end"
+            android:hint=" dsfds fsd ghsd bgk bkbgksbd kgbskda bgkdsbigdsi gdsnn gmbd skbgf skd"
+            android:maxLines="1"
+            android:textColor="@color/textGrayDark"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_user"
+            app:layout_constraintBottom_toBottomOf="@+id/CEditText4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/CEditText4" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/CTextView18"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:text="Expiration Date"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/CTextView19"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout6"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout6" />
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/CTextView19"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="CVV"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/CTextView18"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout6"
+        app:layout_constraintStart_toEndOf="@+id/CTextView18"
+        app:layout_constraintTop_toTopOf="@+id/CTextView18" />
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/CTextView20"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_edittext"
+        android:padding="@dimen/_10sdp"
+        android:text="09/22"
+        android:textSize="@dimen/_11sdp"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="@+id/CTextView18"
+        app:layout_constraintStart_toStartOf="@+id/CTextView18"
+        app:layout_constraintTop_toBottomOf="@+id/CTextView18" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_edittext"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="@+id/CTextView19"
+        app:layout_constraintStart_toStartOf="@+id/CTextView19"
+        app:layout_constraintTop_toBottomOf="@+id/CTextView19">
+
+        <com.tickitbookit.controls.CEditText
+            android:id="@+id/CEditText8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="8dp"
+            android:background="@null"
+            android:ellipsize="end"
+            android:hint="1"
+            android:maxLines="1"
+            android:textColor="@color/textGrayDark"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imgCVV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgCVV"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_help_circle"
+            app:layout_constraintBottom_toBottomOf="@+id/CEditText8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/CEditText8" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

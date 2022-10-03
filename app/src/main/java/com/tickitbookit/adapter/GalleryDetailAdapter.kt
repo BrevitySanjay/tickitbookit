@@ -10,10 +10,13 @@ import com.tickitbookit.R
 import com.tickitbookit.moels.DummyData
 
 
-class GalleryDetailAdapter(private val searchItems : ArrayList<DummyData>) : RecyclerView.Adapter<GalleryDetailAdapter.ViewHolder>(){
+class GalleryDetailAdapter(private val searchItems: ArrayList<DummyData>) :
+    RecyclerView.Adapter<GalleryDetailAdapter.ViewHolder>() {
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.row_gallery_detail, parent, false))
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(
+        LayoutInflater.from(parent.context).inflate(R.layout.row_gallery_detail, parent, false)
+    )
 
     override fun onBindViewHolder(holder: ViewHolder, @SuppressLint("RecyclerView") position: Int) {
 

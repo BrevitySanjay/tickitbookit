@@ -1,13 +1,12 @@
 package com.tickitbookit.adapter
 
 import android.annotation.SuppressLint
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.tickitbookit.R
-import android.widget.TextView
 import com.tickitbookit.moels.DummyData
 
 
@@ -27,6 +26,9 @@ class SearchActivityDialogAdapter(private val searchItems1 : ArrayList<DummyData
         holder.itemView.setOnClickListener {
 
         }
+        if (position == searchItems1.size - 1) {
+            holder.viewDivider.visibility = View.GONE
+        }
 
     }
 
@@ -34,5 +36,6 @@ class SearchActivityDialogAdapter(private val searchItems1 : ArrayList<DummyData
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var tvCategoryName = itemView.findViewById<TextView>(R.id.tvCategoryName)!!
+        var viewDivider = itemView.findViewById<View>(R.id.viewDivider)!!
     }
 }

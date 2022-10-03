@@ -13,7 +13,9 @@ import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.tickitbookit.R
+import com.tickitbookit.activity.CardDetailsActivity
 import com.tickitbookit.activity.LoginActivity
+import com.tickitbookit.activity.MainActivity
 import com.tickitbookit.adapter.DestinationItemAdapter
 import com.tickitbookit.databinding.FragmentMainHomeBinding
 import com.tickitbookit.moels.DummyData
@@ -80,6 +82,9 @@ class MainHomeFragment : Fragment() {
 
         binding.btnSearch.setOnClickListener {
             changeFragment(HomeFragment())
+        }
+        binding.txtViewAll.setOnClickListener {
+            startActivity(Intent(context, CardDetailsActivity::class.java))
         }
 
         binding.tabActivity.setOnClickListener {

@@ -56,7 +56,7 @@
         <item name="android:windowIsFloating">true</item>
     </style>
 
-    <style name="Dialog" parent="Theme.Design.BottomSheetDialog">
+    <style name="Dialog" parent="Theme.AppCompat.Light.Dialog">
         <!-- <item name="android:windowCloseOnTouchOutside">false</item>-->
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowContentOverlay">@null</item>

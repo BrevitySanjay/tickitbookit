@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -235,7 +234,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/txtHighLightsDesc">
 
 
-
                 <com.tickitbookit.controls.CTextViewSemibold
                     android:id="@+id/txtOverView"
                     android:layout_width="0dp"
@@ -309,8 +307,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginStart="10dp"
-                    android:text="@string/meeting_point"
                     android:layout_weight="1"
+                    android:text="@string/meeting_point"
                     android:textColor="@color/purple_200"
                     android:textSize="@dimen/_11sdp"
                     android:textStyle="normal" />
@@ -627,7 +625,6 @@ Travel by boat and see the sights from the water"
     </androidx.core.widget.NestedScrollView>
 
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout3"
         android:layout_width="match_parent"
@@ -659,7 +656,13 @@ Travel by boat and see the sights from the water"
             android:textSize="@dimen/_12sdp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
+        <LinearLayout
+            android:id="@+id/llParticipant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDate" >
 
         <com.tickitbookit.controls.CTextViewSemibold
             android:id="@+id/tvSelectPart"
@@ -669,9 +672,7 @@ Travel by boat and see the sights from the water"
             android:layout_marginTop="8dp"
             android:text="Select Participants"
             android:textColor="@color/black"
-            android:textSize="@dimen/_12sdp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvDate" />
+            android:textSize="@dimen/_12sdp"/>
 
 
         <com.tickitbookit.controls.CTextViewLight
@@ -679,14 +680,11 @@ Travel by boat and see the sights from the water"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
+            android:layout_marginStart="24dp"
             android:text="2 Adult, 1 Child"
             android:textColor="@color/textGrayDark"
-            android:textSize="@dimen/_11sdp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/tvSelectPart"
-            app:layout_constraintTop_toBottomOf="@+id/tvSelectPart"
-            app:layout_constraintVertical_bias="0.0" />
-
+            android:textSize="@dimen/_11sdp" />
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/llPrice"
@@ -742,7 +740,6 @@ Travel by boat and see the sights from the water"
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

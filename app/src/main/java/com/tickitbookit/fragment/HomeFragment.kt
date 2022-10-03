@@ -88,7 +88,6 @@ class HomeFragment : Fragment() {
             searchDialog()
         }
 
-        return binding.root
     }
 
     private fun searchDialog() {
@@ -98,6 +97,10 @@ class HomeFragment : Fragment() {
         val wlp = window!!.attributes
         dialog?.setContentView(dialogSearchLayoutBinding.root)
         dialog?.show()
+
+        dialogSearchLayoutBinding.imgClose.setOnClickListener {
+            dialog?.dismiss()
+        }
 
 
         dialogSearchLayoutBinding.rvDialogSearchActivity.layoutManager =
