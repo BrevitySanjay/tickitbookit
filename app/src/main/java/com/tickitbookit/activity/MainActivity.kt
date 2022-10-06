@@ -10,7 +10,6 @@ class MainActivity : CustomAppCompatActivity() {
 
     /** CREATED BY SANJAY DAMOR Mon Sep 12 16:52:50 IST 2022 **/
 
-
     private lateinit var binding: ActivityMainBinding
     private lateinit var mainHomeFragment : MainHomeFragment
 
