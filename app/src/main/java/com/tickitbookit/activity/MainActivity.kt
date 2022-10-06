@@ -9,6 +9,7 @@ import com.tickitbookit.fragment.MainHomeFragment
 class MainActivity : CustomAppCompatActivity() {
 
     /** CREATED BY SANJAY DAMOR Mon Sep 12 16:52:50 IST 2022 **/
+    /** CHNAGES **/
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var mainHomeFragment : MainHomeFragment
