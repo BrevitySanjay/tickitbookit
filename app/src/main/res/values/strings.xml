@@ -63,4 +63,5 @@ This option was created based on customer feedback to offer an alternative itine
     <string name="search_flight">Search Flight</string>
     <string name="fare_type">Fare Type</string>
     <string name="departure_times">Departure Times</string>
+    <string name="add_traveller">Add Traveller</string>
 </resources>

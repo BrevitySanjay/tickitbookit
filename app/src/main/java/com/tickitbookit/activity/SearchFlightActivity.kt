@@ -1,4 +1,5 @@
 package com.tickitbookit.activity
+import android.content.Intent
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -54,6 +55,10 @@ class SearchFlightActivity : CustomAppCompatActivity() {
         binding.back.setOnClickListener { finish() }
         binding.btnFilter.setOnClickListener { filterDialog() }
 
+        binding.edit.setOnClickListener {
+            startActivity(Intent(this,CompleteBookingActivity::class.java))
+        }
+
     }
 
     private fun filterDialog() {
@@ -71,6 +76,7 @@ class SearchFlightActivity : CustomAppCompatActivity() {
         filterBottomSheet.imgRefund.setOnClickListener {
 
         }
+
 
         filterBottomSheet.rvFlightStop.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
         filterBottomSheet.rvFlightStop.adapter = FilterTypeAdapter(searchItems1)

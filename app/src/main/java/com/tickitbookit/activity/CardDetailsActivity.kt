@@ -23,7 +23,6 @@ class CardDetailsActivity : AppCompatActivity() {
         binding = ActivityCardDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         searchItems.add(DummyData("350", "**** **** 350"))
         searchItems.add(DummyData("350", "**** **** 550"))
         searchItems.add(DummyData("350", "**** **** 632"))

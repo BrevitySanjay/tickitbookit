@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_8sdp"
+    android:elevation="@dimen/_5sdp"
+    app:cardElevation="@dimen/_5sdp"
+    android:background="@color/white"
+    android:layout_margin="@dimen/_5sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bgGray">
+
+
+        <com.tickitbookit.controls.CTextView
+            android:id="@+id/tvDepart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Depart"
+            android:textColor="@color/textGrayDark"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.tickitbookit.controls.CTextViewSemibold
+            android:id="@+id/tvCityName1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_back_right"
+            android:text="Kolkata"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDepart"
+            app:layout_constraintStart_toEndOf="@+id/tvDepart"
+            app:layout_constraintTop_toTopOf="@+id/tvDepart" />
+
+
+        <com.tickitbookit.controls.CTextViewSemibold
+            android:id="@+id/tvCityName2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Bombay"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCityName1"
+            app:layout_constraintStart_toEndOf="@+id/tvCityName1"
+            app:layout_constraintTop_toTopOf="@+id/tvCityName1" />
+
+
+        <com.tickitbookit.controls.CTextViewLight
+            android:id="@+id/tvBookingTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:text="08 Jul | 1 Stop | 23h 00m"
+            android:textColor="@color/textGrayDark"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toStartOf="@+id/tvRefund"
+            app:layout_constraintStart_toStartOf="@+id/tvDepart"
+            app:layout_constraintTop_toBottomOf="@+id/tvCityName1" />
+
+
+        <com.tickitbookit.controls.CTextView
+            android:id="@+id/tvRefund"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Partially Refunded"
+            android:textColor="@color/purple_200"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvBookingTime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvBookingTime" />
+
+
+        <com.tickitbookit.controls.CTextView
+            android:id="@+id/tvPolicy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_information_chat_right"
+            android:drawablePadding="@dimen/_5sdp"
+            android:text="View Cancellation Policy"
+            android:textColor="@color/textGreen"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="@+id/tvRefund"
+            app:layout_constraintTop_toBottomOf="@+id/tvRefund" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/tvPolicy">
+
+
+            <ImageView
+                android:id="@+id/immFlightCompany"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_spice_jet"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.tickitbookit.controls.CTextViewSemibold
+                android:id="@+id/tvFlightName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="SpiceJet"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/immFlightCompany"
+                app:layout_constraintEnd_toStartOf="@+id/tvFlightCode"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/immFlightCompany"
+                app:layout_constraintTop_toTopOf="@+id/immFlightCompany" />
+
+
+            <com.tickitbookit.controls.CTextView
+                android:id="@+id/tvFlightCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="SG 8107"
+                android:textColor="@color/textGrayDark"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvFlightName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvFlightName"
+                app:layout_constraintTop_toTopOf="@+id/tvFlightName" />
+
+
+            <com.tickitbookit.controls.CTextViewSemibold
+                android:id="@+id/tvFlightTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="13:00"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="@+id/tvFlightName"
+                app:layout_constraintStart_toStartOf="@+id/immFlightCompany"
+                app:layout_constraintTop_toBottomOf="@+id/immFlightCompany" />
+
+
+            <com.tickitbookit.controls.CTextView
+                android:id="@+id/tvFlightDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Fri, 27 May 2022"
+                android:textColor="@color/textGrayDark"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintEnd_toEndOf="@+id/tvFlightTime"
+                app:layout_constraintStart_toStartOf="@+id/tvFlightTime"
+                app:layout_constraintTop_toBottomOf="@+id/tvFlightTime" />
+
+
+            <com.tickitbookit.controls.CTextViewSemibold
+                android:id="@+id/tvFlightCityName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kolkata [CCU]"
+                android:textColor="@color/textGrayDark"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toTopOf="@+id/tvFlightDate"
+                app:layout_constraintEnd_toEndOf="@+id/tvFlightCode"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tvFlightCode"
+                app:layout_constraintTop_toTopOf="@+id/tvFlightTime" />
+
+
+            <com.tickitbookit.controls.CTextView
+                android:id="@+id/tvPersonName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="Netaji Subhash Chandra Terminal 2"
+                android:textColor="@color/textGrayDark"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvFlightCityName"
+                app:layout_constraintTop_toBottomOf="@+id/tvFlightCityName" />
+
+
+            <ImageView
+                android:id="@+id/imgDot"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_dot_gray"
+                app:layout_constraintEnd_toEndOf="@+id/tvFlightDate"
+                app:layout_constraintStart_toStartOf="@+id/tvFlightDate"
+                app:layout_constraintTop_toBottomOf="@+id/tvFlightDate" />
+
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_65sdp"
+                android:src="@drawable/dot_line_gray_v"
+                app:layout_constraintEnd_toEndOf="@+id/imgDot"
+                app:layout_constraintStart_toStartOf="@+id/imgDot"
+                app:layout_constraintTop_toBottomOf="@+id/imgDot" />
+
+
+            <ImageView
+                android:id="@+id/imgDot1"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:src="@drawable/ic_dot_gray"
+                app:layout_constraintEnd_toEndOf="@+id/imageView11"
+                app:layout_constraintStart_toStartOf="@+id/imageView11"
+                app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_23sdp"
+                android:src="@drawable/ic_plan_lending"
+                app:layout_constraintBottom_toTopOf="@+id/imgDot1"
+                app:layout_constraintEnd_toEndOf="@+id/imageView11"
+                app:layout_constraintStart_toStartOf="@+id/imageView11"
+                app:layout_constraintTop_toBottomOf="@+id/imgDot" />
+
+
+            <com.tickitbookit.controls.CTextViewSemibold
+                android:id="@+id/tvFlightTimeReturn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="13:00"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="@+id/imgDot1"
+                app:layout_constraintStart_toStartOf="@+id/imgDot1"
+                app:layout_constraintTop_toBottomOf="@+id/imgDot1" />
+
+
+            <com.tickitbookit.controls.CTextView
+                android:id="@+id/tvFlightDateReturn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Fri, 27 May 2022"
+                android:textColor="@color/textGrayDark"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintEnd_toEndOf="@+id/tvFlightTimeReturn"
+                app:layout_constraintStart_toStartOf="@+id/tvFlightTimeReturn"
+                app:layout_constraintTop_toBottomOf="@+id/tvFlightTimeReturn" />
+
+
+            <com.tickitbookit.controls.CTextView
+                android:id="@+id/tvFlightTotalTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="2 hrs 10 min"
+                android:textColor="@color/grayLight"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView12"
+                app:layout_constraintStart_toStartOf="@+id/tvPersonName"
+                app:layout_constraintTop_toTopOf="@+id/imageView12" />
+
+
+            <com.tickitbookit.controls.CTextView
+                android:id="@+id/tvFlightRoot"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Non-Stop"
+                android:textColor="@color/grayLight"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/tvFlightTotalTime"
+                app:layout_constraintStart_toStartOf="@+id/tvFlightTotalTime"
+                app:layout_constraintTop_toBottomOf="@+id/tvFlightTotalTime" />
+
+
+            <com.tickitbookit.controls.CTextViewSemibold
+                android:id="@+id/tvFlightCityNameReturn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bombay [BOM]"
+                android:textColor="@color/textGrayDark"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvFlightTimeReturn"
+                app:layout_constraintStart_toStartOf="@+id/tvFlightCityName"
+                app:layout_constraintTop_toTopOf="@+id/tvFlightTimeReturn" />
+
+
+            <com.tickitbookit.controls.CTextView
+                android:id="@+id/tvPersonNameReturn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Netaji Subhash Chandra Terminal 2"
+                android:textColor="@color/textGrayDark"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintEnd_toEndOf="@+id/tvPersonName"
+                app:layout_constraintStart_toStartOf="@+id/tvPersonName"
+                app:layout_constraintTop_toBottomOf="@+id/tvFlightCityNameReturn" />
+
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/dot_line_devide"
+                app:layout_constraintEnd_toEndOf="@+id/tvPersonNameReturn"
+                app:layout_constraintStart_toStartOf="@+id/tvFlightDateReturn"
+                app:layout_constraintTop_toBottomOf="@+id/tvPersonNameReturn" />
+
+
+            <com.tickitbookit.controls.CTextView
+                android:id="@+id/tvPlan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Aircraft"
+                android:textColor="@color/textGrayDark"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintEnd_toStartOf="@+id/tvClass"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+
+
+            <com.tickitbookit.controls.CTextView
+                android:id="@+id/tvClass"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Travel Class"
+                android:textColor="@color/textGrayDark"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvPlan"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvPersonNameReturn"
+                app:layout_constraintTop_toTopOf="@+id/tvPlan" />
+
+
+            <com.tickitbookit.controls.CTextViewSemibold
+                android:id="@+id/tvPlanName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="DHC8 DASH8"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="@+id/tvPlan"
+                app:layout_constraintStart_toStartOf="@+id/tvPlan"
+                app:layout_constraintTop_toBottomOf="@+id/tvPlan" />
+
+
+            <com.tickitbookit.controls.CTextViewSemibold
+                android:id="@+id/tvFlightClassName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Economy"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvPlanName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvPlan"
+                app:layout_constraintTop_toTopOf="@+id/tvPlanName" />
+
+
+            <com.tickitbookit.controls.CTextView
+                android:id="@+id/tvKg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Check in Baggage"
+                android:textColor="@color/textGrayDark"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintEnd_toEndOf="@+id/tvPlan"
+                app:layout_constraintStart_toStartOf="@+id/tvPlanName"
+                app:layout_constraintTop_toBottomOf="@+id/tvPlanName" />
+
+
+            <com.tickitbookit.controls.CTextViewSemibold
+                android:id="@+id/tvKGName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="16dp"
+                android:text="Adult - 15kg"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvKg"
+                app:layout_constraintStart_toStartOf="@+id/tvKg"
+                app:layout_constraintTop_toBottomOf="@+id/tvKg"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+            <com.tickitbookit.controls.CTextView
+                android:id="@+id/tvAdult"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Check in Baggage"
+                android:textColor="@color/textGrayDark"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvFlightClassName"
+                app:layout_constraintTop_toTopOf="@+id/tvKg" />
+
+
+            <com.tickitbookit.controls.CTextViewSemibold
+                android:id="@+id/tvAdultName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Adult - 7kg"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+
+
+
+
+
+
+
+
+
+
+                app:layout_constraintBottom_toBottomOf="@+id/tvKGName"
+                app:layout_constraintEnd_toEndOf="@+id/tvAdult"
+                app:layout_constraintStart_toStartOf="@+id/tvAdult"
+                app:layout_constraintTop_toTopOf="@+id/tvKGName"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

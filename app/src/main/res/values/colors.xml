@@ -14,6 +14,7 @@
     <color name="ratings_yellow">#DBDF00</color>
     <color name="transparent">#ffffffff</color>
     <color name="grayLight">#CCCCCC</color>
+    <color name="bgGray">#F5F5F5</color>
 
     <!--referance akbar travelas.com-->
 </resources>
