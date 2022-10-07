@@ -68,8 +68,7 @@ class HomeFragment : Fragment() {
         categoryItem1.add(DummyData("350", "Outdoor"))
         categoryItem1.add(DummyData("350", "Rides"))
 
-        binding.rvSearchActivity.layoutManager =
-            LinearLayoutManager(context, RecyclerView.VERTICAL, false)
+        binding.rvSearchActivity.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
         binding.rvSearchActivity.adapter = SearchItemAdapter(searchItems)
         binding.tvActivityDetail1.text = searchItems.size.toString()
 

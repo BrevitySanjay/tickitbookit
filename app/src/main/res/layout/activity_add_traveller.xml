@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.AddTravellerActivity">
+
+
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:padding="@dimen/_4sdp"
+        android:src="@drawable/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/routName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/add_traveller"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/back"
+        app:layout_constraintEnd_toStartOf="@+id/edit"
+        app:layout_constraintStart_toEndOf="@+id/back"
+        app:layout_constraintTop_toTopOf="@+id/back" />
+
+    <ImageView
+        android:id="@+id/edit"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginEnd="16dp"
+        android:padding="@dimen/_4sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/routName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/routName" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/grayLight"
+        android:elevation="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back" />
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/edit"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/back"
+        app:layout_constraintTop_toBottomOf="@+id/routName"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgAlert"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_alert_circle"
+                app:layout_constraintStart_toStartOf="@+id/CTextViewSemibold4"
+                app:layout_constraintTop_toBottomOf="@+id/CTextViewSemibold4" />
+
+
+            <LinearLayout
+                android:id="@+id/parentLinearLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/tvAdult"
+                app:layout_constraintStart_toStartOf="@+id/tvAdult"
+                app:layout_constraintTop_toBottomOf="@+id/tvAdult" />
+
+
+            <com.tickitbookit.controls.CTextViewLight
+                android:id="@+id/CTextViewLight2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Login to view your saved traveller list, Unlock amazing deals &amp; much more!"
+                android:textColor="@color/textGrayDark"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.tickitbookit.controls.CTextViewLight
+                android:id="@+id/tvAlert"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:drawablePadding="@dimen/_8sdp"
+                android:text="Please make sure you enter the Name as per
+your Government photo id."
+                android:textColor="@color/textGrayDark"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintEnd_toEndOf="@+id/btnGuestLogin"
+                app:layout_constraintStart_toEndOf="@+id/imgAlert"
+                app:layout_constraintTop_toBottomOf="@+id/CTextViewSemibold4" />
+
+
+            <com.tickitbookit.controls.CTextViewSemibold
+                android:id="@+id/btnLogin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/round_corner_blue5_border"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="Login"
+                android:textColor="@color/purple_200"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintEnd_toStartOf="@+id/btnGuestLogin"
+                app:layout_constraintStart_toStartOf="@+id/CTextViewLight2"
+                app:layout_constraintTop_toBottomOf="@+id/CTextViewLight2" />
+
+
+            <com.tickitbookit.controls.CTextViewSemibold
+                android:id="@+id/btnGuestLogin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/round_corner_blue_5"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="Login as Guest"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/btnLogin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnLogin"
+                app:layout_constraintTop_toTopOf="@+id/btnLogin" />
+
+
+            <com.tickitbookit.controls.CTextViewSemibold
+                android:id="@+id/CTextViewSemibold4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="Traveller Details:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/btnLogin"
+                app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+
+            <com.tickitbookit.controls.CTextViewSemibold
+                android:id="@+id/tvSelectType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/round_corner_gray5_border"
+                android:drawableEnd="@drawable/ic_up_arrow"
+                android:padding="@dimen/_10sdp"
+                android:text="Adult X 1"
+                android:textColor="@color/purple_200"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintEnd_toEndOf="@+id/tvAlert"
+                app:layout_constraintStart_toStartOf="@+id/imgAlert"
+                app:layout_constraintTop_toBottomOf="@+id/tvAlert" />
+
+
+            <com.tickitbookit.controls.CTextViewSemibold
+                android:id="@+id/tvAdult"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="start"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tvSelectType"
+                app:layout_constraintStart_toStartOf="@+id/tvSelectType"
+                app:layout_constraintTop_toBottomOf="@+id/tvSelectType" />
+
+
+            <com.tickitbookit.controls.CTextViewSemibold
+                android:id="@+id/tvAddNewAdult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="@dimen/_5sdp"
+                android:text="+Add New Adult"
+                android:textColor="@color/purple_200"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintEnd_toEndOf="@+id/tvSelectType"
+                app:layout_constraintTop_toBottomOf="@+id/parentLinearLayout" />
+
+
+            <com.tickitbookit.controls.CTextViewSemibold
+                android:id="@+id/tvSelectChildren"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/round_corner_gray5_border"
+                android:drawableEnd="@drawable/ic_up_arrow"
+                android:padding="@dimen/_10sdp"
+                android:text="Children X 1"
+                android:textColor="@color/purple_200"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintEnd_toEndOf="@+id/tvAddNewAdult"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddNewAdult" />
+
+
+            <com.tickitbookit.controls.CTextViewSemibold
+                android:id="@+id/tvChildren"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="start"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tvSelectChildren"
+                app:layout_constraintStart_toStartOf="@+id/tvSelectChildren"
+                app:layout_constraintTop_toBottomOf="@+id/tvSelectChildren" />
+
+
+            <LinearLayout
+                android:id="@+id/parentChildrenLinearLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/tvSelectChildren"
+                app:layout_constraintStart_toStartOf="@+id/tvSelectChildren"
+                app:layout_constraintTop_toBottomOf="@+id/tvChildren" />
+
+
+            <com.tickitbookit.controls.CTextViewSemibold
+                android:id="@+id/tvAddNewChildren"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="@dimen/_5sdp"
+                android:text="+Add New Children"
+                android:textColor="@color/purple_200"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintEnd_toEndOf="@+id/tvSelectChildren"
+                app:layout_constraintTop_toBottomOf="@+id/parentChildrenLinearLayout" />
+
+
+            <com.tickitbookit.controls.CTextViewSemibold
+                android:id="@+id/tvContactInformation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="Contact Information:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddNewChildren" />
+
+
+            <com.tickitbookit.controls.CTextViewLight
+                android:id="@+id/tvTicket"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableStart="@drawable/ic_tickit"
+                android:drawablePadding="@dimen/_15sdp"
+                android:text="Your ticket and flights information will be sent here."
+                android:textColor="@color/textGrayDark"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvContactInformation" />
+
+
+            <com.tickitbookit.controls.CEditText
+                android:id="@+id/edtMobileCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_edittext"
+                android:drawableEnd="@drawable/ic_down_arrow"
+                android:drawablePadding="@dimen/_10sdp"
+                android:inputType="textPersonName"
+                android:padding="@dimen/_15sdp"
+                android:text="+91"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/edtMobileNumber"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTicket" />
+
+
+            <com.tickitbookit.controls.CEditText
+                android:id="@+id/edtMobileNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_edittext"
+                android:hint="Mobile Number"
+                android:inputType="number"
+                android:padding="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/edtMobileCode"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/edtMobileCode"
+                app:layout_constraintTop_toTopOf="@+id/edtMobileCode" />
+
+
+            <com.tickitbookit.controls.CEditText
+                android:id="@+id/edtEmailAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_edittext"
+                android:hint="Enter your email address"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/edtMobileCode"
+                app:layout_constraintTop_toBottomOf="@+id/edtMobileNumber" />
+
+
+            <com.tickitbookit.controls.CTextViewSemibold
+                android:id="@+id/tvUseGST"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Use GSTIN For This Booking (Optional)"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtEmailAddress" />
+
+
+            <com.tickitbookit.controls.CTextViewLight
+                android:id="@+id/tvDummy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:text="Claim credit of GST charges, your, Taxes may get updated post submitting your GST details."
+                android:textColor="@color/textGrayDark"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintEnd_toStartOf="@+id/btnAdd"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvUseGST" />
+
+
+            <com.tickitbookit.controls.CTextViewSemibold
+                android:id="@+id/btnAdd"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_blue_5"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="Add"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvDummy"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvDummy" />
+
+
+            <com.tickitbookit.controls.CEditText
+                android:id="@+id/edtGSTNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_edittext"
+                android:hint="GSTIN"
+                android:inputType="text"
+                android:padding="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDummy" />
+
+
+            <com.tickitbookit.controls.CEditText
+                android:id="@+id/edtGSTHolderName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_edittext"
+                android:hint="GST Holder Name"
+                android:inputType="textPersonName"
+                android:padding="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtGSTNumber" />
+
+
+            <ImageView
+                android:id="@+id/imgRefund"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_refund_unselect"
+                app:layout_constraintStart_toStartOf="@+id/edtGSTHolderName"
+                app:layout_constraintTop_toBottomOf="@+id/edtGSTHolderName" />
+
+
+            <com.tickitbookit.controls.CTextView
+                android:id="@+id/tvRefund"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Save GST Details"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/imgRefund"
+                app:layout_constraintStart_toEndOf="@+id/imgRefund"
+                app:layout_constraintTop_toTopOf="@+id/imgRefund" />
+
+
+            <com.tickitbookit.controls.CTextViewSemibold
+                android:id="@+id/btnContinue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/round_corner_blue_5"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="Continue"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvRefund" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

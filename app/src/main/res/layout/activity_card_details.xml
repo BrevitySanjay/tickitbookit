@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".activity.CardDetailsActivity">
+
 
     <ImageView
         android:id="@+id/imgBack"
-        android:layout_width="@dimen/_25sdp"
-        android:layout_height="@dimen/_25sdp"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="8dp"
         android:src="@drawable/ic_arrow_left_black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -34,7 +37,7 @@
         android:id="@+id/CTextView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:text="Saved Cards"
         android:textColor="@color/black"
         android:textSize="@dimen/_14sdp"
@@ -65,13 +68,13 @@
         android:scrollbars="none"
         app:layout_constraintEnd_toEndOf="@+id/tabFlights"
         app:layout_constraintStart_toStartOf="@+id/CTextView5"
-        app:layout_constraintTop_toBottomOf="@+id/CTextView5" />
+        app:layout_constraintTop_toBottomOf="@+id/tabFlights" />
 
     <com.tickitbookit.controls.CTextViewSemibold
         android:id="@+id/tvAddCard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="12dp"
         android:text="+ Add New Card"
         android:textColor="@color/purple_200"
         android:textSize="@dimen/_13sdp"

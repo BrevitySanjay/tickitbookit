@@ -8,8 +8,6 @@
     tools:context=".activity.SearchFlightActivity"
     android:background="@color/white">
 
-
-
     <ImageView
         android:id="@+id/back"
         android:layout_width="@dimen/_25sdp"
