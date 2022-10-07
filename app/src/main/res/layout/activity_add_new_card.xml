@@ -181,10 +181,10 @@
         android:layout_height="@dimen/_38sdp"
         android:layout_marginTop="8dp"
         android:background="@drawable/bg_edittext"
+        android:gravity="center_vertical"
         android:padding="@dimen/_10sdp"
         android:text="09/22"
         android:textSize="@dimen/_11sdp"
-        android:gravity="center_vertical"
         app:layout_constraintEnd_toEndOf="@+id/CTextView18"
         app:layout_constraintStart_toStartOf="@+id/CTextView18"
         app:layout_constraintTop_toBottomOf="@+id/CTextView18" />
@@ -232,4 +232,82 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_purple_circle"
+        app:layout_constraintStart_toStartOf="@+id/CTextView20"
+        app:layout_constraintTop_toBottomOf="@+id/CTextView20" />
+
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/CTextView21"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:gravity="center_vertical"
+        android:text="Set as default"
+        android:textColor="@color/textGrayDark"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+        app:layout_constraintStart_toEndOf="@+id/imageView11"
+        app:layout_constraintTop_toTopOf="@+id/imageView11" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <com.tickitbookit.controls.CTextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Total Amount:"
+            android:textColor="@color/textGrayDark"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintBottom_toTopOf="@+id/tvSelectPart"
+            app:layout_constraintEnd_toEndOf="@+id/tvSelectPart"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvSelectPart"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.tickitbookit.controls.CTextViewSemibold
+            android:id="@+id/tvSelectPart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="$8154.00"
+            android:drawableEnd="@drawable/ic_information_chat_red"
+            android:drawablePadding="@dimen/_10sdp"
+            android:textColor="@color/textGreen"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.tickitbookit.controls.CTextViewSemibold
+            android:id="@+id/btnBookNow"
+            android:layout_width="@dimen/_135sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/round_corner_blue"
+            android:gravity="center"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:text="Continue"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvSelectPart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvDate" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

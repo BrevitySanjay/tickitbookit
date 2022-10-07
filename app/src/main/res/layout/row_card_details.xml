@@ -3,48 +3,47 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="@dimen/_50sdp"
     android:layout_marginTop="@dimen/_5sdp"
     android:layout_marginBottom="@dimen/_5sdp"
-    android:background="@drawable/round_corner_gray">
+    android:background="@drawable/round_corner_gray_5">
 
 
         <ImageView
             android:id="@+id/imgCardType"
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_40sdp"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="8dp"
             android:padding="@dimen/_5sdp"
             android:src="@drawable/ic_visa"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.tickitbookit.controls.CTextView
             android:id="@+id/tvCardNum"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="44dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
             android:alpha="0.5"
             android:text="****  ****  ****  2548"
             android:textColor="@color/textLightGray"
             android:textSize="@dimen/_12sdp"
             app:layout_constraintBottom_toBottomOf="@+id/imgCardType"
+            app:layout_constraintEnd_toStartOf="@+id/imgCardSelecter"
             app:layout_constraintStart_toEndOf="@+id/imgCardType"
-            app:layout_constraintTop_toTopOf="@+id/imgCardType"
-            app:layout_constraintVertical_bias="0.65" />
+            app:layout_constraintTop_toTopOf="@+id/imgCardType" />
 
         <ImageView
             android:id="@+id/imgCardSelecter"
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
+            android:layout_marginEnd="8dp"
             android:padding="@dimen/_5sdp"
             android:src="@drawable/ic_purple_deselected"
             app:layout_constraintBottom_toBottomOf="@+id/tvCardNum"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.833"
-            app:layout_constraintStart_toEndOf="@+id/tvCardNum"
-            app:layout_constraintTop_toTopOf="@+id/tvCardNum"
-            app:layout_constraintVertical_bias="0.466" />
+            app:layout_constraintTop_toTopOf="@+id/tvCardNum" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

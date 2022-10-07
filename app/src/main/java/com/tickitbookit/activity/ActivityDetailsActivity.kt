@@ -15,8 +15,6 @@ import com.tickitbookit.adapter.GalleryDetailAdapter
 import com.tickitbookit.adapter.NearByAdapter
 import com.tickitbookit.classes.CustomAppCompatActivity
 import com.tickitbookit.databinding.ActivityDetailsBinding
-import com.tickitbookit.databinding.CalenderBottomSheetBinding
-import com.tickitbookit.databinding.FilterBottomSheetBinding
 import com.tickitbookit.databinding.ParticipantsBottomSheetBinding
 import com.tickitbookit.moels.DummyData
 import com.tickitbookit.utils.TAG
