@@ -1,5 +1,4 @@
 package com.tickitbookit.activity
-
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -18,23 +17,22 @@ class CardDetailsActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityCardDetailsBinding
     private val searchItems = ArrayList<DummyData>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityCardDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         searchItems.add(DummyData("350", "**** **** 350"))
         searchItems.add(DummyData("350", "**** **** 550"))
         searchItems.add(DummyData("350", "**** **** 632"))
-        Log.d(TAG, "onCreate: " + searchItems.size)
-        binding.rvCardDetails.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+
+        binding.rvCardDetails.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         binding.rvCardDetails.adapter = CardDetailsAdapter(searchItems)
 
         binding.tvAddCard.setOnClickListener {
             startActivity(Intent(this, GalleryActivity::class.java))
         }
-
-
     }
 }
