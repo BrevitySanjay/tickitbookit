@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/top_corner_radius_sheet">
+
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/CTextView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fare Summary"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imgClose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgClose" />
+
+    <ImageView
+        android:id="@+id/imgClose"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/CTextView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Base Fare"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_11sdp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CTextView5" />
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/CTextView30"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Adult(2* $2234)"
+        android:textColor="@color/textGrayDark"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintStart_toStartOf="@+id/CTextView24"
+        app:layout_constraintTop_toBottomOf="@+id/CTextView24" />
+
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/txtAdultFare"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="$ 13600"
+        android:textColor="@color/textGrayDark"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/CTextView30"
+        app:layout_constraintEnd_toEndOf="@+id/imgClose"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/CTextView30"
+        app:layout_constraintTop_toTopOf="@+id/CTextView30" />
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/CTextView31"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Child(1* $2234)"
+        android:textColor="@color/textGrayDark"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintEnd_toEndOf="@+id/CTextView30"
+        app:layout_constraintStart_toStartOf="@+id/CTextView30"
+        app:layout_constraintTop_toBottomOf="@+id/CTextView30" />
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/txtChildFare"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="$ 6560"
+        android:textColor="@color/textGrayDark"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/CTextView31"
+        app:layout_constraintEnd_toEndOf="@+id/txtAdultFare"
+        app:layout_constraintStart_toEndOf="@+id/CTextView31"
+        app:layout_constraintTop_toTopOf="@+id/CTextView31" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="0dp"
+        android:layout_height="0.8dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/grayLight"
+        app:layout_constraintEnd_toEndOf="@+id/txtChildFare"
+        app:layout_constraintStart_toStartOf="@+id/CTextView31"
+        app:layout_constraintTop_toBottomOf="@+id/CTextView31" />
+
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/CTextView33"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Tax &amp; Charges"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_11sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/view1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/view1"
+        app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/CTextView34"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="User Dev. Fee"
+        android:textColor="@color/textGrayDark"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintStart_toStartOf="@+id/CTextView33"
+        app:layout_constraintTop_toBottomOf="@+id/CTextView33" />
+
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/txtUserDevFeeFare"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="$ 426"
+        android:textColor="@color/textGrayDark"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/CTextView34"
+        app:layout_constraintEnd_toEndOf="@+id/CTextView33"
+        app:layout_constraintTop_toTopOf="@+id/CTextView34" />
+
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/txtK3Tax"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="K3 Tax"
+        android:textColor="@color/textGrayDark"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintStart_toStartOf="@+id/CTextView34"
+        app:layout_constraintTop_toBottomOf="@+id/CTextView34" />
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/txtK3TaxFare"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="$ 1005"
+        android:textColor="@color/textGrayDark"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtK3Tax"
+        app:layout_constraintEnd_toEndOf="@+id/txtUserDevFeeFare"
+        app:layout_constraintTop_toTopOf="@+id/txtK3Tax" />
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/txtAirlineMusic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Airline Music"
+        android:textColor="@color/textGrayDark"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintStart_toStartOf="@+id/txtK3Tax"
+        app:layout_constraintTop_toBottomOf="@+id/txtK3Tax" />
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/txtAirlineMusicFare"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="$ 1218"
+        android:textColor="@color/textGrayDark"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtAirlineMusic"
+        app:layout_constraintEnd_toEndOf="@+id/txtK3TaxFare"
+        app:layout_constraintTop_toTopOf="@+id/txtAirlineMusic" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="0.8dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/grayLight"
+        app:layout_constraintEnd_toEndOf="@+id/txtAirlineMusicFare"
+        app:layout_constraintStart_toStartOf="@+id/txtAirlineMusic"
+        app:layout_constraintTop_toBottomOf="@+id/txtAirlineMusic" />
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/txtTotalAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="80dp"
+        android:text="Total Amount"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+
+    <com.tickitbookit.controls.CTextView
+        android:id="@+id/txtTotalAmountfare"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="$ 1218"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTotalAmount"
+        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintTop_toTopOf="@+id/txtTotalAmount" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <com.tickitbookit.controls.CTextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Total Amount:"
+            android:textColor="@color/textGrayDark"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintBottom_toTopOf="@+id/tvSelectPart"
+            app:layout_constraintEnd_toEndOf="@+id/tvSelectPart"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvSelectPart"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.tickitbookit.controls.CTextViewSemibold
+            android:id="@+id/tvSelectPart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:drawableEnd="@drawable/ic_information_chat_red"
+            android:drawablePadding="@dimen/_10sdp"
+            android:text="$8154.00"
+            android:textColor="@color/textGreen"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.tickitbookit.controls.CTextViewSemibold
+            android:id="@+id/btnContinue"
+            android:layout_width="@dimen/_135sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/round_corner_blue"
+            android:gravity="center"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:text="Continue"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvSelectPart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvDate" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

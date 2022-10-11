@@ -17,6 +17,7 @@ import com.tickitbookit.R
 import com.tickitbookit.activity.CardDetailsActivity
 import com.tickitbookit.activity.LoginActivity
 import com.tickitbookit.activity.MainActivity
+import com.tickitbookit.activity.TravellerDetailsActivity
 import com.tickitbookit.adapter.DestinationItemAdapter
 import com.tickitbookit.databinding.FragmentMainHomeBinding
 import com.tickitbookit.moels.DummyData
@@ -85,7 +86,7 @@ class MainHomeFragment : Fragment() {
             changeFragment(HomeFragment())
         }
         binding.txtViewAll.setOnClickListener {
-            startActivity(Intent(context, CardDetailsActivity::class.java))
+            startActivity(Intent(context, TravellerDetailsActivity::class.java))
         }
 
         binding.tabActivity.setOnClickListener {

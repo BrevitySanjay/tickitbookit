@@ -15,6 +15,7 @@
     <color name="transparent">#ffffffff</color>
     <color name="grayLight">#CCCCCC</color>
     <color name="bgGray">#F5F5F5</color>
+    <color name="red">#C42032</color>
 
     <!--referance akbar travelas.com-->
 </resources>

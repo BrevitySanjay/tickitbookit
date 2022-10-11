@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/shadowBg"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_1sdp"
+        android:background="@drawable/round_corner_blue"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="@dimen/_5sdp"
-        android:layout_marginEnd="@dimen/_5sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginBottom="@dimen/_1sdp"
-        android:visibility="gone"
-        android:background="@drawable/round_corner_blue"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <androidx.cardview.widget.CardView
@@ -29,8 +28,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_5sdp"
-        app:cardCornerRadius="@dimen/_8sdp"
         app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_8sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,7 +42,7 @@
 
             <ImageView
                 android:id="@+id/dotLine"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:src="@drawable/dot_line_gray"
                 app:layout_constraintBottom_toBottomOf="@+id/tvTime"
@@ -88,9 +87,20 @@
                     android:textColor="@color/textGreen"
                     android:textSize="@dimen/_13sdp"
                     android:textStyle="bold" />
-
-
             </LinearLayout>
+
+            <com.tickitbookit.controls.CTextView
+                android:id="@+id/tvRefunded"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Refunded"
+                android:gravity="right"
+                android:textColor="@color/purple_200"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout5"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
+
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/shapeableImageView2"
@@ -99,7 +109,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/dummyimage"
+                android:src="@drawable/ic_spice_jet"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:shapeAppearanceOverlay="@style/circleImageView" />
@@ -131,13 +141,25 @@
                 android:id="@+id/tvBom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="40dp"
+                android:layout_marginEnd="60dp"
                 android:text="BOM"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_13sdp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/tvCcu" />
+            
+            <com.tickitbookit.controls.CTextView
+                android:id="@+id/tvDayCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="+1 \nDay"
+                android:textColor="@color/red"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
+                app:layout_constraintStart_toEndOf="@+id/tvBom"
+                app:layout_constraintTop_toTopOf="@+id/tvBom" />
 
             <com.tickitbookit.controls.CTextView
                 android:id="@+id/tvFlightTime"
@@ -157,11 +179,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="8dp"
                 android:text="Non-Stop"
                 android:textColor="@color/grayLight"
                 android:textSize="@dimen/_10sdp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/view8"
                 app:layout_constraintEnd_toStartOf="@+id/tvBomTime"
                 app:layout_constraintStart_toEndOf="@+id/tvTime"
                 app:layout_constraintTop_toBottomOf="@+id/imgPlan" />
@@ -203,8 +225,84 @@
                 app:layout_constraintStart_toStartOf="@+id/tvBom"
                 app:layout_constraintTop_toBottomOf="@+id/tvBom" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <View
+                android:id="@+id/view8"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="@color/grayLight"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="8dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvFlightStop">
+
+                <com.tickitbookit.controls.CTextViewLight
+                    android:id="@+id/tvSeats"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="9 Seat Left"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/_11sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/llFlightInfo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/llFlightInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvBookNow"
+                    app:layout_constraintStart_toEndOf="@+id/tvSeats"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/ic_information_chat_right"
+                        app:tint="@color/textGreen" />
+
+                    <com.tickitbookit.controls.CTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:text="Flight Info"
+                        android:textColor="@color/textGreen"
+                        android:textSize="@dimen/_11sdp" />
+                </LinearLayout>
+
+                <com.tickitbookit.controls.CTextViewSemibold
+                    android:id="@+id/tvBookNow"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/round_corner_blue_5"
+                    android:gravity="center"
+                    android:text="Book Now"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/llFlightInfo"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
 
