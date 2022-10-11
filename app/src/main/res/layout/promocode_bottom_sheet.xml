@@ -94,19 +94,31 @@
         app:layout_constraintStart_toStartOf="@+id/tvWalletPromo"
         app:layout_constraintTop_toBottomOf="@+id/tvWalletPromo" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvPromoCodes"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clRv"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="50dp"
-        android:overScrollMode="never"
-        android:scrollbars="none"
-        tools:listitem="@layout/row_promocode"
+        android:layout_height="@dimen/_200sdp"
+        android:background="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
         app:layout_constraintEnd_toEndOf="@+id/constraintLayout8"
         app:layout_constraintStart_toStartOf="@+id/CTextView32"
-        app:layout_constraintTop_toBottomOf="@+id/CTextView32" />
+        app:layout_constraintTop_toBottomOf="@+id/CTextView32"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPromoCodes"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_200sdp"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/row_promocode" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout3"
@@ -114,7 +126,9 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:elevation="@dimen/_20sdp"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
 
         <com.tickitbookit.controls.CTextView

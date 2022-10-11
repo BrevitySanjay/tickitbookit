@@ -33,19 +33,24 @@
         <entry key="app/src/main/res/drawable/round_corner_gray5_border.xml" value="0.133" />
         <entry key="app/src/main/res/drawable/round_corner_gray_5.xml" value="0.1375" />
         <entry key="app/src/main/res/drawable/round_corner_gray_border.xml" value="0.139" />
+        <entry key="app/src/main/res/drawable/round_corner_pink_5.xml" value="0.1035" />
         <entry key="app/src/main/res/drawable/select_line_white.xml" value="0.203" />
         <entry key="app/src/main/res/drawable/tickit_bookit.xml" value="0.139" />
         <entry key="app/src/main/res/drawable/top_corner_radius_sheet.xml" value="0.205" />
         <entry key="app/src/main/res/drawable/trips_selector.xml" value="0.139" />
         <entry key="app/src/main/res/layout/Participants_bottom_sheet.xml" value="0.1984375" />
         <entry key="app/src/main/res/layout/activity_add_new_card.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_add_traveller.xml" value="0.1984375" />
+        <entry key="app/src/main/res/layout/activity_cancellation.xml" value="0.12" />
         <entry key="app/src/main/res/layout/activity_card_details.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/activity_complete_booking.xml" value="0.1984375" />
         <entry key="app/src/main/res/layout/activity_details.xml" value="0.1904047976011994" />
         <entry key="app/src/main/res/layout/activity_forgot_passwrod.xml" value="0.1984375" />
         <entry key="app/src/main/res/layout/activity_gallery.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_search_flight.xml" value="0.1984375" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_traveller_details.xml" value="0.18" />
         <entry key="app/src/main/res/layout/calender_bottom_sheet.xml" value="0.1984375" />
@@ -53,29 +58,33 @@
         <entry key="app/src/main/res/layout/dialog_search_layout.xml" value="0.2" />
         <entry key="app/src/main/res/layout/fare_summary_bottom_sheet.xml" value="0.22" />
         <entry key="app/src/main/res/layout/filter_bottom_sheet.xml" value="0.16" />
-        <entry key="app/src/main/res/layout/fragment_flight_booking.xml" value="0.1984375" />
+        <entry key="app/src/main/res/layout/fragment_flight_booking.xml" value="0.16" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_main_home.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_multi_city.xml" value="0.1984375" />
         <entry key="app/src/main/res/layout/fragment_trip.xml" value="0.1984375" />
         <entry key="app/src/main/res/layout/loading_dialog.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/noof_travellers_bottom_sheet.xml" value="0.25" />
         <entry key="app/src/main/res/layout/participants_bottom_sheet.xml" value="0.25" />
         <entry key="app/src/main/res/layout/promocode_bottom_sheet.xml" value="0.22" />
         <entry key="app/src/main/res/layout/row_activity.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/row_add_adult.xml" value="0.1984375" />
+        <entry key="app/src/main/res/layout/row_add_children.xml" value="0.1984375" />
         <entry key="app/src/main/res/layout/row_card_details.xml" value="0.25" />
         <entry key="app/src/main/res/layout/row_catrgory.xml" value="0.33" />
         <entry key="app/src/main/res/layout/row_catrgory1.xml" value="0.1628901239846088" />
         <entry key="app/src/main/res/layout/row_day_list.xml" value="0.15384615384615385" />
         <entry key="app/src/main/res/layout/row_destination.xml" value="0.22" />
         <entry key="app/src/main/res/layout/row_filter_type.xml" value="0.1984375" />
-        <entry key="app/src/main/res/layout/row_flight.xml" value="0.1984375" />
+        <entry key="app/src/main/res/layout/row_flight.xml" value="0.2" />
         <entry key="app/src/main/res/layout/row_gallery.xml" value="0.1" />
         <entry key="app/src/main/res/layout/row_gallery_detail.xml" value="0.1984375" />
         <entry key="app/src/main/res/layout/row_multi_city.xml" value="0.1984375" />
         <entry key="app/src/main/res/layout/row_nearby.xml" value="0.1984375" />
         <entry key="app/src/main/res/layout/row_nearbyactivity.xml" value="0.1984375" />
+        <entry key="app/src/main/res/layout/row_no_of_flight_bookign.xml" value="0.18" />
         <entry key="app/src/main/res/layout/row_promocode.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/row_search_activities.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/row_search_activities.xml" value="0.25" />
         <entry key="app/src/main/res/layout/top_corner_radius_sheet.xml" value="0.1" />
         <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.1" />
       </map>

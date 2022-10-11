@@ -26,7 +26,7 @@ class TravellerDetailsActivity : CustomAppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnContinue.setOnClickListener {
-            promoCode()
+            fareSummary()
         }
 
     }
@@ -39,26 +39,6 @@ class TravellerDetailsActivity : CustomAppCompatActivity() {
         dialog.show()
 
         filterBottomSheet.imgClose.setOnClickListener {
-            dialog.dismiss()
-        }
-    }
-
-
-    private fun promoCode() {
-        val promoCodeBottomSheet = PromocodeBottomSheetBinding.inflate(layoutInflater)
-        val dialog = BottomSheetDialog(this, R.style.SheetDialog)
-        dialog.setCancelable(false)
-        dialog.setContentView(promoCodeBottomSheet.root)
-        dialog.show()
-
-        searchItems.add(DummyData("350","WELCOME" ))
-        searchItems.add(DummyData("350", "WELCOME"))
-        Log.d(TAG, "onCreate: " + searchItems.size)
-        promoCodeBottomSheet.rvPromoCodes.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        promoCodeBottomSheet.rvPromoCodes.adapter = PromoCodeAdapter(searchItems,promoCodeBottomSheet.tvPromoCode)
-
-        promoCodeBottomSheet.imgClose.setOnClickListener {
             dialog.dismiss()
         }
     }

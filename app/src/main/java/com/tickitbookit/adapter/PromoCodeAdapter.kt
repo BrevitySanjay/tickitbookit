@@ -16,8 +16,7 @@ import com.tickitbookit.moels.DummyData
 import com.tickitbookit.moels.DummyData_3
 
 class PromoCodeAdapter(
-    private val searchItems: ArrayList<DummyData>,
-    private val tvPromoCode: CTextView
+    private val searchItems: ArrayList<DummyData>
 ) :
     RecyclerView.Adapter<PromoCodeAdapter.ViewHolder>() {
 
@@ -35,7 +34,6 @@ class PromoCodeAdapter(
 
         if (position == select) {
             holder.tvApplied.setText("Applied")
-            tvPromoCode.setText(searchItems[position].message)
         } else {
             holder.tvApplied.setText("Apply")
         }
