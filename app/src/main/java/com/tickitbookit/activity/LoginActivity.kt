@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
+import com.tickitbookit.R
 import com.tickitbookit.classes.CustomAppCompatActivity
 import com.tickitbookit.databinding.ActivityLoginBinding
 
@@ -15,9 +16,7 @@ class LoginActivity : CustomAppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         clickView()
-
     }
 
 
@@ -38,13 +37,11 @@ class LoginActivity : CustomAppCompatActivity() {
 
         binding.imgVisiblePassword.setOnClickListener {
             if (binding.edtPassword.transformationMethod.equals(PasswordTransformationMethod.getInstance())) {
-                //visiblePassword.setImageResource(R.drawable.eye);
-                binding.edtPassword.transformationMethod =
-                    HideReturnsTransformationMethod.getInstance();
+                binding.imgVisiblePassword.setImageResource(R.drawable.ic_vision);
+                binding.edtPassword.transformationMethod = HideReturnsTransformationMethod.getInstance()
             } else {
-                //visiblePassword.setImageResource(R.drawable.hide);
-                binding.edtPassword.transformationMethod =
-                    PasswordTransformationMethod.getInstance();
+                binding.imgVisiblePassword.setImageResource(R.drawable.ic_vision_eye);
+                binding.edtPassword.transformationMethod = PasswordTransformationMethod.getInstance()
             }
         }
     }

@@ -29,27 +29,18 @@ class PromoCodeAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, @SuppressLint("RecyclerView") position: Int) {
         Log.d("TAG", "onBindViewHolder: ")
-        holder.tvPromoCode.text = searchItems[position].message
-        holder.tvPromoCodeDesc.text = searchItems[position].message
+        /*holder.tvPromoCode.text = searchItems[position].message
+        holder.tvPromoCodeDesc.text = searchItems[position].message*/
 
         if (position == select) {
-            holder.tvApplied.setText("Applied")
+            holder.tvApplied.text = "Applied"
         } else {
-            holder.tvApplied.setText("Apply")
+            holder.tvApplied.text = "Apply"
         }
 
         holder.tvApplied.setOnClickListener {
             select = position
             notifyDataSetChanged()
-        }
-
-        holder.itemView.setOnClickListener {
-            holder.itemView.context.startActivity(
-                Intent(
-                    holder.itemView.context,
-                    ActivityDetailsActivity::class.java
-                )
-            )
         }
     }
 

@@ -13,6 +13,7 @@ import com.tickitbookit.adapter.PromoCodeAdapter
 import com.tickitbookit.adapter.SearchItemAdapter
 import com.tickitbookit.classes.CustomAppCompatActivity
 import com.tickitbookit.databinding.ActivityCompleteBookingBinding
+import com.tickitbookit.databinding.CompleteBookingFareSummaryBottomSheetBinding
 import com.tickitbookit.databinding.PromocodeBottomSheetBinding
 import com.tickitbookit.moels.DummyData
 import com.tickitbookit.utils.TAG
@@ -49,9 +50,10 @@ class CompleteBookingActivity : CustomAppCompatActivity() {
             promoCode()
         }
         binding.btnBookNow.setOnClickListener {
-            startActivity(Intent(this, AddTravellerActivity::class.java))
+            completeBookingFareSummary()
         }
     }
+
 
     private fun promoCode() {
         val promoCodeBottomSheet = PromocodeBottomSheetBinding.inflate(layoutInflater)
@@ -71,6 +73,25 @@ class CompleteBookingActivity : CustomAppCompatActivity() {
 
         promoCodeBottomSheet.imgClose.setOnClickListener {
             dialog.dismiss()
+        }
+    }
+
+
+    private fun completeBookingFareSummary() {
+        val completeBookingFareSummary =
+            CompleteBookingFareSummaryBottomSheetBinding.inflate(layoutInflater)
+        val dialog = BottomSheetDialog(this, R.style.SheetDialog)
+        dialog.setCancelable(false)
+        dialog.setContentView(completeBookingFareSummary.root)
+        dialog.show()
+
+        completeBookingFareSummary.imgClose.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        completeBookingFareSummary.btnContinue.setOnClickListener {
+            dialog.dismiss()
+            startActivity(Intent(this, AddTravellerActivity::class.java))
         }
     }
 }

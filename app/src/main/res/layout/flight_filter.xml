@@ -32,11 +32,11 @@
         app:layout_constraintTop_toTopOf="@+id/imgClose" />
 
 
-    <com.tickitbookit.controls.CTextViewLight
+    <com.tickitbookit.controls.CTextView
         android:id="@+id/tvReset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="24dp"
         android:text="@string/reset"
         android:textColor="@color/textGray"
         android:textSize="@dimen/_11sdp"
@@ -45,15 +45,15 @@
         app:layout_constraintTop_toTopOf="@+id/CTextView5" />
 
 
-    <com.tickitbookit.controls.CTextView
+    <com.tickitbookit.controls.CTextViewSemibold
         android:id="@+id/tvClass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:text="Class"
         android:textColor="@color/black"
         android:textSize="@dimen/_12sdp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/imgClose"
         app:layout_constraintTop_toBottomOf="@+id/imgClose" />
 
@@ -83,7 +83,7 @@
         android:id="@+id/view2"
         android:layout_width="0dp"
         android:layout_height="0.8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:background="@color/grayLight"
         app:layout_constraintEnd_toEndOf="@+id/rvFlightStop"
         app:layout_constraintHorizontal_bias="1.0"
@@ -91,7 +91,7 @@
         app:layout_constraintTop_toBottomOf="@+id/rvFlightStop" />
 
 
-    <com.tickitbookit.controls.CTextView
+    <com.tickitbookit.controls.CTextViewSemibold
         android:id="@+id/tvPriceRange"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -99,7 +99,6 @@
         android:text="@string/price_range"
         android:textColor="@color/black"
         android:textSize="@dimen/_12sdp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/view2"
         app:layout_constraintTop_toBottomOf="@+id/view2" />
 
@@ -140,14 +139,14 @@
         android:id="@+id/view3"
         android:layout_width="0dp"
         android:layout_height="0.8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:background="@color/grayLight"
         app:layout_constraintEnd_toEndOf="@+id/rangeSeekbar3"
         app:layout_constraintStart_toStartOf="@+id/tvPriceRange"
         app:layout_constraintTop_toBottomOf="@+id/rangeSeekbar3" />
 
 
-    <com.tickitbookit.controls.CTextView
+    <com.tickitbookit.controls.CTextViewSemibold
         android:id="@+id/tvFareType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -155,7 +154,6 @@
         android:text="@string/fare_type"
         android:textColor="@color/black"
         android:textSize="@dimen/_12sdp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/view3"
         app:layout_constraintTop_toBottomOf="@+id/view3" />
 
@@ -174,8 +172,8 @@
 
     <ImageView
         android:id="@+id/imgRefund"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
         android:layout_marginTop="16dp"
         android:src="@drawable/ic_refund_unselect"
         app:layout_constraintStart_toStartOf="@+id/tvFareType"
@@ -186,7 +184,7 @@
         android:id="@+id/tvRefund"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="10dp"
         android:text="Refundable"
         android:textColor="@color/black"
         android:textSize="@dimen/_11sdp"
@@ -207,7 +205,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imgRefund" />
 
 
-    <com.tickitbookit.controls.CTextView
+    <com.tickitbookit.controls.CTextViewSemibold
         android:id="@+id/tvTimes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -215,7 +213,6 @@
         android:text="@string/departure_times"
         android:textColor="@color/black"
         android:textSize="@dimen/_12sdp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/view4"
         app:layout_constraintTop_toBottomOf="@+id/view4" />
 
@@ -256,13 +253,12 @@
         app:layout_constraintStart_toStartOf="@+id/tvTime"
         app:layout_constraintTop_toBottomOf="@+id/tvTime">
 
-
         <ImageView
+            android:id="@+id/imgCloudy"
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
             android:padding="@dimen/_3sdp"
             android:src="@drawable/ic_orion_partly_cloudy" />
-
 
         <com.tickitbookit.controls.CTextView
             android:id="@+id/tvCloudy"
@@ -282,7 +278,7 @@
         android:layout_height="@dimen/_60sdp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/round_corner_blue"
+        android:background="@drawable/round_corner_gray_10"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@+id/llCloudy"
@@ -291,20 +287,19 @@
         app:layout_constraintTop_toTopOf="@+id/llCloudy"
         app:layout_constraintVertical_bias="0.0">
 
-
         <ImageView
+            android:id="@+id/imgSunny"
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
             android:padding="@dimen/_3sdp"
             android:src="@drawable/ic_sunny" />
-
 
         <com.tickitbookit.controls.CTextView
             android:id="@+id/tvSunny"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="12 - 18"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="@dimen/_12sdp" />
 
 
@@ -326,6 +321,7 @@
 
 
         <ImageView
+            android:id="@+id/imgSunrise"
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
             android:padding="@dimen/_3sdp"
@@ -358,6 +354,7 @@
 
 
         <ImageView
+            android:id="@+id/imgNight"
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
             android:src="@drawable/ic_moon" />

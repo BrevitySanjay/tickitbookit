@@ -16,16 +16,19 @@ import com.tickitbookit.hide
 import com.tickitbookit.moels.DummyData
 import com.tickitbookit.show
 
-class FilterTypeAdapter(private val searchItems: ArrayList<DummyData>) : RecyclerView.Adapter<FilterTypeAdapter.ViewHolder>() {
+class FilterClassTypeAdapter(private val searchItems: ArrayList<DummyData>) :
+    RecyclerView.Adapter<FilterClassTypeAdapter.ViewHolder>() {
 
     private var select = -1
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.row_filter_type, parent, false))
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
+        ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.row_class_type, parent, false))
 
     override fun onBindViewHolder(holder: ViewHolder, @SuppressLint("RecyclerView") position: Int) {
+
         holder.tvName.text = searchItems[position].message
 
-        if(select == position){
+        if (select == position){
             holder.imgCheckBox.setImageResource(R.drawable.ic_radio_select)
         }else{
             holder.imgCheckBox.setImageResource(R.drawable.ic_unselect_radio)
@@ -35,6 +38,7 @@ class FilterTypeAdapter(private val searchItems: ArrayList<DummyData>) : Recycle
             select = position
             notifyDataSetChanged()
         }
+
     }
 
     override fun getItemCount() = searchItems.size

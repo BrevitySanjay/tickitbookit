@@ -1,5 +1,6 @@
 package com.tickitbookit.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -32,15 +33,21 @@ class TravellerDetailsActivity : CustomAppCompatActivity() {
     }
 
     private fun fareSummary() {
-        val filterBottomSheet = FareSummaryBottomSheetBinding.inflate(layoutInflater)
+        val fareSummaryBottomSheetBinding = FareSummaryBottomSheetBinding.inflate(layoutInflater)
         val dialog = BottomSheetDialog(this, R.style.SheetDialog)
         dialog.setCancelable(false)
-        dialog.setContentView(filterBottomSheet.root)
+        dialog.setContentView(fareSummaryBottomSheetBinding.root)
         dialog.show()
 
-        filterBottomSheet.imgClose.setOnClickListener {
+        fareSummaryBottomSheetBinding.imgClose.setOnClickListener {
             dialog.dismiss()
         }
+
+        fareSummaryBottomSheetBinding.btnContinue.setOnClickListener {
+            startActivity(Intent(this,CardDetailsActivity::class.java))
+        }
+
+
     }
 
 }

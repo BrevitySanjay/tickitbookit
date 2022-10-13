@@ -9,11 +9,12 @@ import com.tickitbookit.R
 import com.tickitbookit.adapter.CardDetailsAdapter
 import com.tickitbookit.adapter.DestinationItemAdapter
 import com.tickitbookit.adapter.NearByAdapter
+import com.tickitbookit.classes.CustomAppCompatActivity
 import com.tickitbookit.databinding.ActivityCardDetailsBinding
 import com.tickitbookit.moels.DummyData
 import com.tickitbookit.utils.TAG
 
-class CardDetailsActivity : AppCompatActivity() {
+class CardDetailsActivity : CustomAppCompatActivity() {
 
     private lateinit var binding: ActivityCardDetailsBinding
     private val searchItems = ArrayList<DummyData>()
@@ -32,7 +33,10 @@ class CardDetailsActivity : AppCompatActivity() {
         binding.rvCardDetails.adapter = CardDetailsAdapter(searchItems)
 
         binding.tvAddCard.setOnClickListener {
-            startActivity(Intent(this, GalleryActivity::class.java))
+            startActivity(Intent(this, AddNewCardActivity::class.java))
         }
+
+        binding.imgBack.setOnClickListener { finish() }
+
     }
 }

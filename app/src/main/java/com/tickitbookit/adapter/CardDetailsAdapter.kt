@@ -36,14 +36,6 @@ class CardDetailsAdapter(private val searchItems: ArrayList<DummyData>) :
             notifyDataSetChanged()
         }
 
-        holder.itemView.setOnClickListener {
-            holder.itemView.context.startActivity(
-                Intent(
-                    holder.itemView.context,
-                    ActivityDetailsActivity::class.java
-                )
-            )
-        }
     }
 
     override fun getItemCount() = searchItems.size

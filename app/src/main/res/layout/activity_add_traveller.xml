@@ -435,8 +435,8 @@ your Government photo id."
 
             <ImageView
                 android:id="@+id/imgRefund"
-                android:layout_width="@dimen/_20sdp"
-                android:layout_height="@dimen/_20sdp"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
                 android:layout_marginTop="16dp"
                 android:src="@drawable/ic_refund_unselect"
                 app:layout_constraintStart_toStartOf="@+id/edtGSTHolderName"

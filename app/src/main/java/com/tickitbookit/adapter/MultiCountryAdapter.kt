@@ -20,7 +20,6 @@ class MultiCountryAdapter(private val searchItems : ArrayList<DummyData>) : Recy
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.row_multi_city, parent, false))
 
     override fun onBindViewHolder(holder: ViewHolder, @SuppressLint("RecyclerView") position: Int) {
-        //holder.date.text = ""
 
         holder.remove.setOnClickListener {
             mItemClickListener.onItemClick(position)

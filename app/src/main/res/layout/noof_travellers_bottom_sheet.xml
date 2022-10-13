@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/_400sdp"
+    android:layout_height="wrap_content"
     android:background="@drawable/top_corner_radius_sheet">
 
 
@@ -24,286 +25,57 @@
         android:id="@+id/imgClose"
         android:layout_width="@dimen/_30sdp"
         android:layout_height="@dimen/_30sdp"
-        android:layout_marginStart="356dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:padding="@dimen/_5sdp"
         android:src="@drawable/ic_close"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.tickitbookit.controls.CTextView
-        android:id="@+id/CTextView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:text="Adults"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_13sdp"
-        android:textStyle="normal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CTextView5" />
 
     <com.tickitbookit.controls.CTextView
-        android:id="@+id/CTextView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/age_13_years_and_above"
-        android:textColor="@color/textGrayDark"
-        android:textSize="@dimen/_10sdp"
-        android:textStyle="normal"
-        app:layout_constraintStart_toStartOf="@+id/CTextView14"
-        app:layout_constraintTop_toBottomOf="@+id/CTextView14" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout9"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/round_corner_gray_5"
-        app:layout_constraintBottom_toBottomOf="@+id/CTextView15"
-        app:layout_constraintEnd_toEndOf="@+id/imgClose"
-        app:layout_constraintTop_toTopOf="@+id/CTextView14">
-
-
-        <ImageView
-            android:id="@+id/imgMinus"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_30sdp"
-            android:layout_marginStart="@dimen/_15sdp"
-            android:layout_marginEnd="@dimen/_10sdp"
-            android:padding="@dimen/_5sdp"
-            android:src="@drawable/ic_minus"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <com.tickitbookit.controls.CTextView
-            android:id="@+id/tvAdultNum"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_5sdp"
-            android:layout_marginEnd="@dimen/_5sdp"
-            android:text="0"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_14sdp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/imgPlus"
-            app:layout_constraintEnd_toStartOf="@+id/imgPlus"
-            app:layout_constraintStart_toEndOf="@+id/imgMinus"
-            app:layout_constraintTop_toTopOf="@+id/imgPlus" />
-
-        <ImageView
-            android:id="@+id/imgPlus"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_30sdp"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_15sdp"
-            android:padding="@dimen/_5sdp"
-            android:src="@drawable/ic_plus"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/clChildren"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="@+id/constraintLayout9"
-        app:layout_constraintStart_toStartOf="@+id/CTextView15"
-        app:layout_constraintTop_toBottomOf="@+id/CTextView15">
-
-
-        <com.tickitbookit.controls.CTextView
-            android:id="@+id/tvChild"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Children"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_13sdp"
-            android:textStyle="normal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <com.tickitbookit.controls.CTextView
-            android:id="@+id/tvChildDesc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Age 12 years and below"
-            android:textColor="@color/textGrayDark"
-            android:textSize="@dimen/_10sdp"
-            android:textStyle="normal"
-            app:layout_constraintStart_toStartOf="@+id/tvChild"
-            app:layout_constraintTop_toBottomOf="@+id/tvChild" />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout11"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/round_corner_gray_5"
-            app:layout_constraintBottom_toBottomOf="@+id/tvChildDesc"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tvChild">
-
-
-            <ImageView
-                android:id="@+id/imgMinus2"
-                android:layout_width="@dimen/_30sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:layout_marginStart="@dimen/_15sdp"
-                android:layout_marginEnd="@dimen/_10sdp"
-                android:padding="@dimen/_5sdp"
-                android:src="@drawable/ic_minus"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-
-            <com.tickitbookit.controls.CTextView
-                android:id="@+id/tvChildNum"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:layout_marginEnd="@dimen/_5sdp"
-                android:text="0"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_14sdp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/imgPlus2"
-                app:layout_constraintEnd_toStartOf="@+id/imgPlus2"
-                app:layout_constraintStart_toEndOf="@+id/imgMinus2"
-                app:layout_constraintTop_toTopOf="@+id/imgPlus2" />
-
-            <ImageView
-                android:id="@+id/imgPlus2"
-                android:layout_width="@dimen/_30sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:layout_marginStart="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_15sdp"
-                android:padding="@dimen/_5sdp"
-                android:src="@drawable/ic_plus"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout12"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="@+id/clChildren"
-        app:layout_constraintStart_toStartOf="@+id/clChildren"
-        app:layout_constraintTop_toBottomOf="@+id/clChildren">
-
-
-        <com.tickitbookit.controls.CTextView
-            android:id="@+id/tvInfants"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Infants"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_13sdp"
-            android:textStyle="normal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <com.tickitbookit.controls.CTextView
-            android:id="@+id/tvtvInfantsDesc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Age 0 to 2 years and below"
-            android:textColor="@color/textGrayDark"
-            android:textSize="@dimen/_10sdp"
-            android:textStyle="normal"
-            app:layout_constraintStart_toStartOf="@+id/tvInfants"
-            app:layout_constraintTop_toBottomOf="@+id/tvInfants" />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/clInfants"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/round_corner_gray_5"
-            app:layout_constraintBottom_toBottomOf="@+id/tvtvInfantsDesc"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tvInfants">
-
-
-            <ImageView
-                android:id="@+id/imgMinus3"
-                android:layout_width="@dimen/_30sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:layout_marginStart="@dimen/_15sdp"
-                android:layout_marginEnd="@dimen/_10sdp"
-                android:padding="@dimen/_5sdp"
-                android:src="@drawable/ic_minus"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-
-            <com.tickitbookit.controls.CTextView
-                android:id="@+id/tvInfantsNum"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:layout_marginEnd="@dimen/_5sdp"
-                android:text="0"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_14sdp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/imgPlus3"
-                app:layout_constraintEnd_toStartOf="@+id/imgPlus3"
-                app:layout_constraintStart_toEndOf="@+id/imgMinus3"
-                app:layout_constraintTop_toTopOf="@+id/imgPlus3" />
-
-            <ImageView
-                android:id="@+id/imgPlus3"
-                android:layout_width="@dimen/_30sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:layout_marginStart="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_15sdp"
-                android:padding="@dimen/_5sdp"
-                android:src="@drawable/ic_plus"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <com.tickitbookit.controls.CTextViewSemibold
         android:id="@+id/tvClass"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:text="Class"
+        android:paddingStart="@dimen/_8sdp"
         android:textColor="@color/black"
-        android:textSize="@dimen/_15sdp"
-        app:layout_constraintEnd_toEndOf="@+id/constraintLayout12"
-        app:layout_constraintStart_toStartOf="@+id/constraintLayout12"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout12" />
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvNoOfTraveller"
+        app:layout_constraintTop_toBottomOf="@+id/tvNoOfTraveller" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFlightClass"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_140sdp"
+        android:layout_marginTop="8dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="@+id/tvNoOfTraveller"
+        app:layout_constraintStart_toStartOf="@+id/tvClass"
+        app:layout_constraintTop_toBottomOf="@+id/tvClass" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tvNoOfTraveller"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/imgClose"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CTextView5" />
 
     <com.tickitbookit.controls.CTextViewSemibold
         android:id="@+id/btnBookNow"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_35sdp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="24dp"
         android:background="@drawable/round_corner_blue"
         android:gravity="center"
         android:paddingStart="@dimen/_10sdp"
@@ -311,11 +83,10 @@
         android:text="Done"
         android:textColor="@color/white"
         android:textSize="@dimen/_11sdp"
-        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CTextView15" />
+        app:layout_constraintTop_toBottomOf="@+id/rvFlightClass" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

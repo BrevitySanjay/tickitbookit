@@ -10,32 +10,24 @@ import com.tickitbookit.R
 import com.tickitbookit.adapter.CardDetailsAdapter
 import com.tickitbookit.adapter.DestinationItemAdapter
 import com.tickitbookit.adapter.NearByAdapter
+import com.tickitbookit.classes.CustomAppCompatActivity
+import com.tickitbookit.databinding.ActivityAddNewCardBinding
 import com.tickitbookit.databinding.ActivityCardDetailsBinding
 import com.tickitbookit.moels.DummyData
 import com.tickitbookit.utils.TAG
 
-class AddNewCardActivity : AppCompatActivity() {
+class AddNewCardActivity : CustomAppCompatActivity() {
 
-    private lateinit var binding: ActivityCardDetailsBinding
-    private val searchItems = ArrayList<DummyData>()
+    private lateinit var binding: ActivityAddNewCardBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityCardDetailsBinding.inflate(layoutInflater)
+        binding = ActivityAddNewCardBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.imgBack.setOnClickListener { finish() }
 
-
-        searchItems.add(DummyData("350", "**** **** 350"))
-        searchItems.add(DummyData("350", "**** **** 550"))
-        searchItems.add(DummyData("350", "**** **** 632"))
-        Log.d(TAG, "onCreate: " + searchItems.size)
-        binding.rvCardDetails.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        binding.rvCardDetails.adapter = CardDetailsAdapter(searchItems)
-
-        binding.tvAddCard.setOnClickListener {
-            startActivity(Intent(this, GalleryActivity::class.java))
+        binding.CTextView20.setOnClickListener {
+            calenderDialog()
         }
-
-
     }
 }

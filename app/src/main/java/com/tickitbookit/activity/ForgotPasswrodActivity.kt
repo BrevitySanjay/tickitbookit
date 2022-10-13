@@ -3,10 +3,11 @@ package com.tickitbookit.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.tickitbookit.R
+import com.tickitbookit.classes.CustomAppCompatActivity
 import com.tickitbookit.databinding.ActivityForgotPasswrodBinding
 import com.tickitbookit.databinding.ActivityRegisterBinding
 
-class ForgotPasswrodActivity : AppCompatActivity() {
+class ForgotPasswrodActivity : CustomAppCompatActivity() {
 
     private lateinit var binding: ActivityForgotPasswrodBinding
 
@@ -18,7 +19,6 @@ class ForgotPasswrodActivity : AppCompatActivity() {
     }
 
     private fun clickView(){
-
         binding.imgBack.setOnClickListener {
             finish()
         }

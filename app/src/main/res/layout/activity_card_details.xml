@@ -33,7 +33,7 @@
         app:layout_constraintTop_toTopOf="@+id/imgBack" />
 
 
-    <com.tickitbookit.controls.CTextView
+    <com.tickitbookit.controls.CTextViewSemibold
         android:id="@+id/CTextView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,7 +41,6 @@
         android:text="Saved Cards"
         android:textColor="@color/black"
         android:textSize="@dimen/_14sdp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/imgBack"
         app:layout_constraintTop_toBottomOf="@+id/imgBack" />
 

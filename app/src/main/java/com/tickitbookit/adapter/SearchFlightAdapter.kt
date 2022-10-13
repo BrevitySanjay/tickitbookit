@@ -16,10 +16,10 @@ import com.tickitbookit.hide
 import com.tickitbookit.moels.DummyData
 import com.tickitbookit.show
 
-class SearchFlightAdapter(private val searchItems: ArrayList<DummyData>) :
-    RecyclerView.Adapter<SearchFlightAdapter.ViewHolder>() {
+class SearchFlightAdapter(private val searchItems: ArrayList<DummyData>) : RecyclerView.Adapter<SearchFlightAdapter.ViewHolder>() {
 
     private var select = -1
+    lateinit var mItemClickListener: OnItemClickListener
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
         ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.row_flight, parent, false))
@@ -38,13 +38,31 @@ class SearchFlightAdapter(private val searchItems: ArrayList<DummyData>) :
             select = position
             notifyDataSetChanged()
         }
+
+        holder.tvBookNow.setOnClickListener {
+            mItemClickListener.onItemClick(position)
+        }
+
     }
 
+    interface OnItemClickListener {
+        fun onItemClick(position: Int)
+    }
+
+
+    fun setOnItemClickListener(mItemClickListener: OnItemClickListener) {
+        this.mItemClickListener = mItemClickListener
+    }
+
+
     override fun getItemCount() = searchItems.size
+    fun setOnItemClickListener(mItemClickListener: Any) {}
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var tvPrice = itemView.findViewById<TextView>(R.id.tvPrice)!!
         var shadowBg = itemView.findViewById<ConstraintLayout>(R.id.shadowBg)!!
         var flightItemLayout = itemView.findViewById<ConstraintLayout>(R.id.flightItemLayout)!!
+        var clBookNow = itemView.findViewById<ConstraintLayout>(R.id.clBookNow)!!
+        var tvBookNow = itemView.findViewById<TextView>(R.id.tvBookNow)!!
     }
 }
